@@ -1,0 +1,3690 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+@charset "utf-8";
+/* 
+	base.css
+	Project: PACMS v3.0
+*/
+/*------ define vars ------*/
+/*------ imports ------*/
+/* 
+	typography.less
+	
+	Project: PACMS v3.0
+	
+*/
+/*------ define vars ------*/
+/*------ typography ------*/
+body,
+tr,
+td {
+  font: 400 14px/18px 'Open Sans', Arial, Helvetica, sans-serif;
+  color: #333333;
+  letter-spacing: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+a,
+a:link,
+a:visited {
+  color: #65b561;
+}
+a:hover,
+a:active {
+  color: #31693d;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+h1 {
+  font-size: 24px;
+  line-height: 24px;
+}
+h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+h5 {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+h6 {
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+small {
+  font-size: 80%;
+  color: #999999;
+}
+.color-theme1 {
+  color: #65b561;
+}
+.color-theme2 {
+  color: #31693d;
+}
+/* 
+	mixins.less
+	Project: PACMS v3.0
+*/
+/*------ mixins ------*/
+.f_right {
+  float: right;
+  display: block;
+}
+.f_left {
+  float: left;
+  display: block;
+}
+.clear {
+  display: block;
+  clear: both;
+}
+.right {
+  text-align: right !important;
+}
+.left {
+  text-align: left !important;
+}
+.center {
+  text-align: center !important;
+}
+.nomargin {
+  margin: 0 !important;
+}
+.nopadding {
+  padding: 0 !important;
+}
+.hidden {
+  display: none !important;
+}
+/*------ animations ------*/
+@keyframes come-in-top {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    top: 10px;
+  }
+  100% {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    top: 0;
+  }
+}
+@-moz-keyframes come-in-top {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    top: 10px;
+  }
+  100% {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    top: 0;
+  }
+}
+@-webkit-keyframes come-in-top {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    top: 10px;
+  }
+  100% {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    top: 0;
+  }
+}
+.come-in-top {
+  -webkit-animation: come-in-top 0.8s ease forwards;
+  -moz-animation: come-in-top 0.8s ease forwards;
+  animation: come-in-top 0.8s ease forwards;
+}
+@keyframes bounce-out-top {
+  0% {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    top: 0;
+  }
+  40% {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    top: 20px;
+  }
+  100% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    top: -50px;
+  }
+}
+@-moz-keyframes bounce-out-top {
+  0% {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    top: 0;
+  }
+  40% {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    top: 20px;
+  }
+  100% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    top: -50px;
+  }
+}
+@-webkit-keyframes bounce-out-top {
+  0% {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    top: 0;
+  }
+  40% {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    top: 20px;
+  }
+  100% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    top: -50px;
+  }
+}
+.bounce-out-top {
+  -webkit-animation: bounce-out-top 0.8s ease forwards;
+  -moz-animation: bounce-out-top 0.8s ease forwards;
+  animation: bounce-out-top 0.8s ease forwards;
+}
+/* 
+	forms.less
+	Project: PACMS v3.0
+	
+*/
+/*------ standard elements ------*/
+label {
+  display: block;
+  height: 20px;
+  padding-bottom: 5px;
+}
+.form-field {
+  float: left;
+  display: block;
+  width: 260px;
+  margin: 0 10px 0 0;
+}
+.img-holder {
+  float: left;
+  display: block;
+  max-width: 258px;
+  min-height: 64px;
+  margin: 0 10px 20px 0;
+}
+.img-holder img {
+  display: block;
+  width: 100%;
+  min-height: 64px;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+}
+.cropbox {
+  border: 1px solid #cccccc !important;
+}
+.input,
+.select,
+.textarea {
+  font-size: 16px;
+  line-height: 30px;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  color: #666666;
+  font-weight: 400;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.input,
+.select,
+.textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  outline: none;
+}
+.input:focus,
+.select:focus,
+.textarea:focus {
+  background: #65b561;
+  color: #fff;
+  border-color: #31693d;
+}
+.input:disabled,
+.select:disabled,
+.textarea:disabled {
+  background-color: #eeeeee !important;
+  color: #cccccc !important;
+}
+.input,
+.select,
+.textarea {
+  border: 1px solid #cccccc;
+  background: #fff;
+  padding: 4px 8px;
+  height: 30px;
+  width: 240px;
+  margin-bottom: 20px;
+}
+.textarea {
+  height: 115px;
+  resize: none;
+  line-height: 20px;
+}
+.textarea#seo-description {
+  height: 200px;
+}
+.select {
+  height: 40px;
+  padding: 4px 8px 4px 4px;
+  background: url("../images/select_arrow.png") right -5px no-repeat #ffffff;
+  width: 260px;
+  text-indent: 0.01px;
+  text-overflow: "";
+}
+.select:focus {
+  background: url("../images/select_arrow.png") right -55px no-repeat #65b561;
+}
+select:focus::-ms-value {
+  background: url("../images/select_arrow.png") right -55px no-repeat #65b561;
+}
+select::-ms-expand {
+  display: none;
+}
+.select_sm {
+  width: 120px;
+}
+input[type=file] {
+  padding: 4px;
+  width: 250px;
+  font-size: 80%;
+  color: #999999;
+}
+.checkbox,
+.radio {
+  display: none;
+}
+.checkbox + label,
+.radio + label {
+  position: relative;
+  display: inline-block;
+  padding: 1px 10px 1px 26px;
+  cursor: pointer;
+  line-height: 20px;
+}
+.checkbox + label:before,
+.radio + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  line-height: 18px;
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #cccccc;
+  text-align: center;
+  color: #65b561;
+  background: #fff;
+}
+.radio + label:before {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.checkbox + label:before,
+.radio + label:before {
+  content: " ";
+}
+.checkbox:checked + label:before {
+  content: "\f00c";
+}
+.radio:checked + label:before {
+  content: "\f111";
+}
+.checkbox:disabled + label:before,
+.radio:disabled + label:before {
+  background-color: #eeeeee;
+}
+/*------ buttons ------*/
+.button,
+a.button,
+.button-sm,
+a.button-sm {
+  display: inline-block;
+  position: relative;
+  background: #65b561;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 0 15px 0 65px;
+  text-decoration: none;
+  font-weight: 700;
+  height: 50px;
+  line-height: 50px;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.button:hover,
+a.button:hover,
+.button-sm:hover,
+a.button-sm:hover {
+  background: #31693d;
+  color: #fff;
+}
+.button .fa {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0;
+  background: #87c584;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.button:hover .fa {
+  background: #418c51;
+}
+.button-sm,
+a.button-sm {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  background: #cccccc;
+}
+.button-sm:hover,
+a.button-sm:hover {
+  background: #65b561;
+}
+.button-sm .fa {
+  margin-right: 15px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.button:disabled,
+.button-sm:disabled,
+a.button.disabled,
+a.button-sm.disabled {
+  background-color: #cccccc !important;
+  color: #eeeeee !important;
+  cursor: default !important;
+  text-decoration: line-through;
+}
+.button:disabled .fa,
+a.button.disabled .fa {
+  background-color: #d9d9d9 !important;
+  color: #fff !important;
+  cursor: default !important;
+}
+.button-sm:disabled .fa,
+a.button-sm.disabled .fa {
+  color: #eeeeee !important;
+  cursor: default !important;
+}
+.cancel {
+  display: inline-block;
+  line-height: 50px;
+  padding: 0;
+  font-size: 16px;
+}
+.delete,
+a.delete {
+  background: #999999;
+}
+.delete:hover,
+a.delete:hover {
+  background: #333333;
+}
+.delete .fa {
+  background: #cccccc;
+  color: #666666;
+}
+.delete:hover .fa {
+  color: #fff;
+  background: #4d4d4d;
+}
+.button-sm.delete .fa,
+a.button-sm.delete .fa {
+  background: #999999;
+}
+.button-sm.delete:hover .fa,
+a.button-sm.delete:hover .fa {
+  background: #333333;
+}
+/*------ toggle switch ------*/
+.onoffswitch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.onoffswitch input {
+  display: none;
+}
+.onoffswitch label {
+  display: block;
+  float: none;
+  overflow: hidden;
+  cursor: pointer;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0px;
+}
+.onoffswitch .inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.2s ease-in;
+  -moz-transition: margin 0.2s ease-in;
+  -ms-transition: margin 0.2s ease-in;
+  -o-transition: margin 0.2s ease-in;
+  transition: margin 0.2s ease-in;
+}
+.onoffswitch .inner:before,
+.onoffswitch .inner:after {
+  float: left;
+  display: block;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: #fff;
+  font-family: FontAwesome;
+  font-weight: normal;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+.onoffswitch .inner:before {
+  content: "\f00c";
+  padding-left: 13px;
+  background-color: #87c584;
+}
+.onoffswitch .inner:after {
+  content: "\f00d";
+  padding-right: 14px;
+  background-color: #cc0000;
+  text-align: right;
+}
+.onoffswitch .switch {
+  display: block;
+  width: 40px;
+  margin: 0px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.onoffswitch input:checked + label .inner {
+  margin-left: 0;
+}
+.onoffswitch input:checked + label .switch {
+  right: 0px;
+}
+.switch-sorter {
+  display: none;
+}
+table tr:nth-child(odd) .switch {
+  background: #eeeeee;
+}
+/*------ page status buttons ------*/
+.page-status {
+  position: relative;
+  display: inline-block;
+  width: 125px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.page-status button {
+  width: 40px;
+  margin-right: 1px;
+  height: 30px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+.page-status button .fa {
+  width: 40px;
+  height: 30px;
+  line-height: 30px;
+  color: #666666;
+  background: #eeeeee;
+}
+.page-status button:hover .fa {
+  color: #fff;
+  background: #65b561;
+}
+.page-status button.active .fa {
+  color: #fff;
+  background: #87c584;
+}
+table tr:nth-child(2n) .page-status button.active .fa,
+.panel-header .page-status button.active .fa {
+  color: #fff;
+  background: #87c584;
+}
+table tr:nth-child(2n) .page-status button .fa,
+.panel-header .page-status button .fa {
+  background: #fff;
+}
+table tr:nth-child(2n) .page-status button:hover .fa,
+.panel-header .page-status button:hover .fa {
+  color: #fff;
+  background: #65b561;
+}
+/*------ dialog box ------*/
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+  content: "";
+  display: table;
+}
+.ui-helper-clearfix:after {
+  clear: both;
+}
+.ui-helper-clearfix {
+  zoom: 1;
+}
+.ui-widget-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+}
+.ui-dialog {
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  padding: 0;
+  overflow: hidden;
+  outline: none !important;
+  background: #fff;
+  color: #333333;
+  border: 0;
+}
+.ui-dialog .ui-dialog-titlebar {
+  padding: 20px;
+  position: relative;
+  background: #65b561;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.ui-dialog.dialog-error .ui-dialog-titlebar {
+  background: #cc0000;
+}
+.ui-dialog .ui-dialog-title {
+  float: left;
+  margin: 0 25px 0 0;
+  text-transform: uppercase;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 20px;
+  margin: -12px 0 0 0;
+  padding: 0 0 0 1px;
+  height: 20px;
+  background: none;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.ui-dialog .ui-dialog-titlebar-close span {
+  display: block;
+}
+.ui-dialog .ui-dialog-titlebar-close:hover,
+.ui-dialog .ui-dialog-titlebar-close:focus {
+  background: none;
+  color: #fff;
+}
+.ui-dialog .ui-dialog-content {
+  position: relative;
+  border: 0;
+  padding: 20px;
+  background: none;
+  overflow: auto;
+  zoom: 1;
+}
+.ui-dialog .ui-dialog-buttonpane {
+  text-align: left;
+  border-width: 1px 0 0 0;
+  background-image: none;
+  margin: 0;
+  padding: 0 10px 10px;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+  clear: both;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button {
+  float: left;
+  display: block;
+  margin: 0 10px 5px 10px;
+  cursor: pointer;
+  background: #666666;
+  color: #fff;
+  outline: none !important;
+  border: 0;
+  font-size: 12px;
+  text-transform: none;
+  padding: 5px 10px;
+  font-weight: 600;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button .fa {
+  margin-right: 5px;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button:first-child {
+  float: right;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button:hover {
+  background: #333333;
+  color: #fff;
+}
+.ui-dialog .ui-resizable-se {
+  width: 14px;
+  height: 14px;
+  right: 3px;
+  bottom: 3px;
+}
+/*------ tooltip ------*/
+.tooltip {
+  font-weight: 800;
+  color: #65b561;
+  cursor: pointer;
+  padding-left: 5px;
+}
+.ui-tooltip {
+  display: none;
+  position: absolute;
+  background: #333333;
+  font-size: 12px;
+  width: 210px;
+  padding: 20px;
+  color: #fff;
+  z-index: 99;
+  line-height: 18px;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  -moz-box-shadow: 0 0 20px 0px rgba(11, 11, 11, 0.35);
+  -webkit-box-shadow: 0 0 20px 0px rgba(11, 11, 11, 0.35);
+  box-shadow: 0 0 20px 0px rgba(11, 11, 11, 0.35);
+}
+.ui-tooltip h4 {
+  color: #65b561;
+}
+/*------ datepicker ------*/
+.ui-datepicker {
+  width: 250px;
+  padding: .2em 4px 0 4px;
+  display: none;
+  background: #31693d;
+  -moz-box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+  box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+}
+.ui-datepicker .ui-datepicker-header {
+  position: relative;
+  padding: .2em 0;
+  background: #31693d;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  position: absolute;
+  top: 2px;
+  width: 1.8em;
+  height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+  color: #fff;
+}
+.ui-datepicker .ui-datepicker-prev {
+  left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+  right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  top: 50%;
+  margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+  margin: 0 2.3em;
+  line-height: 1.8em;
+  text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+  font-size: 1em;
+  margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+  width: 45%;
+}
+.ui-datepicker table {
+  width: 100%;
+  font-size: .9em;
+  border-collapse: collapse;
+  margin: 0 0 .4em;
+}
+.ui-datepicker th {
+  padding: .7em .3em;
+  text-align: center;
+  font-weight: bold;
+  border: 0;
+  background: #eeeeee;
+}
+.ui-datepicker td {
+  border: 0;
+  padding: 2px;
+  background: #ffffff !important;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+  display: block;
+  padding: .3em;
+  text-align: right;
+  text-decoration: none;
+  border: 1px solid #eeeeee;
+}
+.ui-datepicker td a.ui-state-hover {
+  background: #65b561;
+  color: #fff;
+  font-weight: 700;
+}
+.ui-datepicker td.ui-datepicker-today a {
+  background: #31693d;
+  color: #fff;
+  font-weight: 700;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+  background-image: none;
+  margin: .7em 0 0 0;
+  padding: 0 .2em;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+  float: right;
+  margin: .5em .2em .4em;
+  cursor: pointer;
+  padding: .2em .6em .3em .6em;
+  width: auto;
+  overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+  float: left;
+}
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+  width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+  float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+  width: 98%;
+  margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+  width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+  width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+  width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+  border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+  clear: left;
+}
+.ui-datepicker-row-break {
+  clear: both;
+  width: 100%;
+  font-size: 0;
+}
+/*------ tabs ------*/
+.tabs.page-content {
+  display: none;
+}
+.ui-tabs {
+  display: block !important;
+  margin-bottom: 20px;
+}
+.ui-tabs .ui-tabs-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1px;
+  width: 100%;
+}
+.ui-tabs .ui-tabs-nav li {
+  display: inline-block;
+  position: relative;
+  margin-right: 2px;
+}
+.ui-tabs .ui-tabs-nav li a {
+  display: block;
+  position: relative;
+  z-index: 1;
+  padding: 15px 20px;
+  background: #cccccc;
+  color: #666666;
+  font-weight: 800;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin: 0 0 0 -1px;
+  outline: none;
+  text-decoration: none;
+  -moz-box-shadow: 0 -2px 4px -2px rgba(11, 11, 11, 0.35) inset;
+  -webkit-box-shadow: 0 -2px 4px -2px rgba(11, 11, 11, 0.35) inset;
+  box-shadow: 0 -2px 4px -2px rgba(11, 11, 11, 0.35) inset;
+}
+.no-touch .ui-tabs .ui-tabs-nav li a:hover {
+  background: #ecf6ec;
+}
+.no-touch .ui-tabs .ui-tabs-nav li.ui-state-active a:hover,
+.ui-tabs .ui-tabs-nav li.ui-state-active a {
+  background: #fff;
+  color: #333333;
+  z-index: 2;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+.ui-tabs .ui-tabs-panel {
+  display: block;
+  clear: both;
+  padding: 20px;
+  background: #fff;
+  -moz-box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+  box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+}
+/*------ google map picker ------*/
+.gllpLatlonPicker {
+  float: left;
+  display: block;
+  position: relative;
+  border: 0;
+  padding: 0;
+  margin: 0 15px 10px 0;
+}
+.gllpMap {
+  position: relative;
+  z-index: 1;
+  width: 590px;
+  max-width: 100%;
+  height: 235px;
+}
+.gllpSearch {
+  position: absolute;
+  z-index: 2;
+  top: 5px;
+  right: 5px;
+  left: 40px;
+}
+.gllpSearch .input {
+  width: 200px;
+}
+.gllpSearch .button-sm {
+  background: #333333;
+}
+.gllpSearch .button-sm:hover {
+  background: #65b561;
+}
+/*------ alerts ------*/
+.success {
+  color: #65b561;
+}
+.error {
+  color: #cc0000;
+}
+.required {
+  border-color: #cc0000;
+  color: #cc0000;
+}
+.system-alert {
+  background: #fff;
+  -moz-box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+  box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+  margin: 0 0 20px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  overflow: hidden;
+}
+.system-alert .title {
+  padding: 20px 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.system-alert .title .fa {
+  padding-right: 10px;
+  font-size: 125%;
+}
+.system-alert .message {
+  padding: 20px 15px;
+  color: #333333;
+}
+.system-alert.important .title {
+  background: #333333;
+  color: #fff;
+}
+.system-alert.important .panel-toggle {
+  color: #cccccc;
+  font-size: 14px;
+}
+.system-alert.error {
+  border-left: 5px solid #cc0000;
+}
+.system-alert.error .title {
+  background: #ffe6e6;
+}
+.system-alert.success {
+  border-left: 5px solid #65b561;
+}
+.system-alert.success .title {
+  background: #ecf6ec;
+}
+#system-mini-alerts {
+  position: fixed;
+  z-index: 20;
+  top: 110px;
+  right: 20px;
+  width: 260px;
+  pointer-events: none;
+}
+.system-alert.mini {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  background: #333333;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.system-alert.mini .message {
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+.system-alert.mini.error .title,
+.system-alert.mini.success .title {
+  padding-bottom: 0;
+  background: none;
+}
+.system-alert.mini.error .title .fa {
+  color: #cc0000;
+}
+.system-alert.mini.success .title .fa {
+  color: #65b561;
+}
+/*------ login table ------*/
+#login-wrapper {
+  background: url("../images/camo_bkgd.jpg") 0 0 repeat #333333 fixed;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+#login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  margin: -172px 0 0 -150px;
+  padding-bottom: 20px;
+}
+#login-form .checkbox + label {
+  padding-top: 15px;
+}
+#login-form .panel-header {
+  background: #65b561;
+}
+#login-form h1 {
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+}
+#login-form h1 small {
+  display: block;
+  font-weight: 800;
+  color: #333333;
+  font-size: 12px;
+}
+#login-alert {
+  background: #ffe6e6;
+  color: #cc0000;
+  font-weight: 600;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+#login-alert.success {
+  background: #ecf6ec;
+  color: #65b561;
+}
+/*------ search form ------*/
+#search-form {
+  position: relative;
+  float: left;
+  display: block;
+}
+#search-form .input {
+  float: left;
+  display: block;
+  height: 40px;
+  width: 222px;
+  padding-right: 20px;
+}
+#search-form .button {
+  padding: 0;
+  width: 50px;
+}
+#search-form .button .fa {
+  background: #cccccc;
+}
+#search-form .button:hover .fa {
+  background: #666666;
+}
+#search-form #clear-search {
+  position: absolute;
+  z-index: 1;
+  left: 232px;
+  line-height: 50px;
+}
+/*------ social inputs ------*/
+.social {
+  position: relative;
+}
+.social .input {
+  padding-left: 50px;
+  width: 198px;
+  position: relative;
+  z-index: 1;
+}
+.social .fa {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  top: 1px;
+  left: 1px;
+  background-color: #87c584;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 38px;
+}
+/*------ google preview ------*/
+.google-preview {
+  padding: 0 10px 20px;
+  overflow: hidden;
+  min-width: 240px;
+}
+.google-preview div {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #545454;
+  font-size: 13px;
+  line-height: 18px;
+}
+.google-preview div h2 {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: normal;
+  color: #1a0dab;
+  margin: 0 0 3px;
+  padding: 0;
+}
+.google-preview div h6 {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #006621;
+}
+/*------ seo styles ------*/
+.seo-pass {
+  color: #65b561 !important;
+}
+.seo-fail {
+  color: #ff1a1a !important;
+}
+.seo-average {
+  color: #ffcc00 !important;
+}
+.seo-summary {
+  width: 65%;
+  list-style: none;
+  margin: 0;
+}
+.seo-summary li {
+  padding: 0 0 10px 30px;
+  line-height: 18px;
+  text-indent: -28px;
+}
+.seo-summary li:before {
+  content: "\f111";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding-right: 12px;
+  font-size: 16px;
+  line-height: 1;
+}
+.seo-summary li.seo-1:before {
+  color: #ff1a1a !important;
+}
+.seo-summary li.seo-2:before {
+  color: #ffcc00 !important;
+}
+.seo-summary li.seo-3:before {
+  color: #65b561 !important;
+}
+tr[class^="seo-"] > td:first-child {
+  position: relative;
+  border-left: 5px solid #ff1a1a;
+}
+tr[class^="seo-"] > td:first-child .tooltip {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: -5px;
+  width: 5px;
+  height: 100%;
+}
+tr.seo-2 > td:first-child {
+  border-color: #ffcc00;
+}
+tr.seo-3 > td:first-child {
+  border-color: #65b561;
+}
+.graph {
+  width: 150px;
+  margin-right: 20px;
+}
+.graph p {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #333333;
+}
+.graph p small {
+  font-size: 14px;
+  color: #31693d;
+}
+.radial-progress,
+.radial-progress.site-avg {
+  position: relative;
+  margin: 0 auto 10px auto;
+  width: 100px;
+  height: 100px;
+  background-color: #ecf6ec;
+  border-radius: 50%;
+}
+.radial-progress .circle .mask,
+.radial-progress.site-avg .circle .mask,
+.radial-progress .circle .fill,
+.radial-progress.site-avg .circle .fill,
+.radial-progress .circle .shadow,
+.radial-progress.site-avg .circle .shadow {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+}
+.radial-progress .circle .shadow,
+.radial-progress.site-avg .circle .shadow {
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1) inset;
+}
+.radial-progress .circle .mask,
+.radial-progress.site-avg .circle .mask,
+.radial-progress .circle .fill,
+.radial-progress.site-avg .circle .fill {
+  -webkit-backface-visibility: hidden;
+  transition: -webkit-transform 1s;
+  transition: -ms-transform 1s;
+  transition: transform 1s;
+  border-radius: 50%;
+}
+.radial-progress .circle .mask,
+.radial-progress.site-avg .circle .mask {
+  clip: rect(0px, 100px, 100px, 50px);
+}
+.radial-progress .circle .mask .fill,
+.radial-progress.site-avg .circle .mask .fill {
+  clip: rect(0px, 50px, 100px, 0px);
+  background-color: #65b561;
+}
+.radial-progress .inset,
+.radial-progress.site-avg .inset {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  margin-left: 15px;
+  margin-top: 15px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
+}
+.radial-progress .inset .percentage,
+.radial-progress.site-avg .inset .percentage {
+  height: 22px;
+  width: 57px;
+  overflow: hidden;
+  position: absolute;
+  top: 24px;
+  left: 6.5px;
+  line-height: 1;
+}
+.radial-progress .inset .percentage .numbers span,
+.radial-progress.site-avg .inset .percentage .numbers span {
+  width: 57px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  color: #65b561;
+}
+.radial-progress.p100 .circle.animate .mask.full,
+.radial-progress.site-avg.p100 .circle.animate .mask.full,
+.radial-progress.p100 .circle.animate .fill,
+.radial-progress.site-avg.p100 .circle.animate .fill {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.radial-progress.p100 .circle.animate .fill.fix,
+.radial-progress.site-avg.p100 .circle.animate .fill.fix {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.radial-progress.p99 .circle.animate .mask.full,
+.radial-progress.site-avg.p99 .circle.animate .mask.full,
+.radial-progress.p99 .circle.animate .fill,
+.radial-progress.site-avg.p99 .circle.animate .fill {
+  -webkit-transform: rotate(178.20000000000002deg);
+  -ms-transform: rotate(178.20000000000002deg);
+  transform: rotate(178.20000000000002deg);
+}
+.radial-progress.p99 .circle.animate .fill.fix,
+.radial-progress.site-avg.p99 .circle.animate .fill.fix {
+  -webkit-transform: rotate(356.40000000000003deg);
+  -ms-transform: rotate(356.40000000000003deg);
+  transform: rotate(356.40000000000003deg);
+}
+.radial-progress.p98 .circle.animate .mask.full,
+.radial-progress.site-avg.p98 .circle.animate .mask.full,
+.radial-progress.p98 .circle.animate .fill,
+.radial-progress.site-avg.p98 .circle.animate .fill {
+  -webkit-transform: rotate(176.4deg);
+  -ms-transform: rotate(176.4deg);
+  transform: rotate(176.4deg);
+}
+.radial-progress.p98 .circle.animate .fill.fix,
+.radial-progress.site-avg.p98 .circle.animate .fill.fix {
+  -webkit-transform: rotate(352.8deg);
+  -ms-transform: rotate(352.8deg);
+  transform: rotate(352.8deg);
+}
+.radial-progress.p97 .circle.animate .mask.full,
+.radial-progress.site-avg.p97 .circle.animate .mask.full,
+.radial-progress.p97 .circle.animate .fill,
+.radial-progress.site-avg.p97 .circle.animate .fill {
+  -webkit-transform: rotate(174.6deg);
+  -ms-transform: rotate(174.6deg);
+  transform: rotate(174.6deg);
+}
+.radial-progress.p97 .circle.animate .fill.fix,
+.radial-progress.site-avg.p97 .circle.animate .fill.fix {
+  -webkit-transform: rotate(349.2deg);
+  -ms-transform: rotate(349.2deg);
+  transform: rotate(349.2deg);
+}
+.radial-progress.p96 .circle.animate .mask.full,
+.radial-progress.site-avg.p96 .circle.animate .mask.full,
+.radial-progress.p96 .circle.animate .fill,
+.radial-progress.site-avg.p96 .circle.animate .fill {
+  -webkit-transform: rotate(172.8deg);
+  -ms-transform: rotate(172.8deg);
+  transform: rotate(172.8deg);
+}
+.radial-progress.p96 .circle.animate .fill.fix,
+.radial-progress.site-avg.p96 .circle.animate .fill.fix {
+  -webkit-transform: rotate(345.6deg);
+  -ms-transform: rotate(345.6deg);
+  transform: rotate(345.6deg);
+}
+.radial-progress.p95 .circle.animate .mask.full,
+.radial-progress.site-avg.p95 .circle.animate .mask.full,
+.radial-progress.p95 .circle.animate .fill,
+.radial-progress.site-avg.p95 .circle.animate .fill {
+  -webkit-transform: rotate(171deg);
+  -ms-transform: rotate(171deg);
+  transform: rotate(171deg);
+}
+.radial-progress.p95 .circle.animate .fill.fix,
+.radial-progress.site-avg.p95 .circle.animate .fill.fix {
+  -webkit-transform: rotate(342deg);
+  -ms-transform: rotate(342deg);
+  transform: rotate(342deg);
+}
+.radial-progress.p94 .circle.animate .mask.full,
+.radial-progress.site-avg.p94 .circle.animate .mask.full,
+.radial-progress.p94 .circle.animate .fill,
+.radial-progress.site-avg.p94 .circle.animate .fill {
+  -webkit-transform: rotate(169.20000000000002deg);
+  -ms-transform: rotate(169.20000000000002deg);
+  transform: rotate(169.20000000000002deg);
+}
+.radial-progress.p94 .circle.animate .fill.fix,
+.radial-progress.site-avg.p94 .circle.animate .fill.fix {
+  -webkit-transform: rotate(338.40000000000003deg);
+  -ms-transform: rotate(338.40000000000003deg);
+  transform: rotate(338.40000000000003deg);
+}
+.radial-progress.p93 .circle.animate .mask.full,
+.radial-progress.site-avg.p93 .circle.animate .mask.full,
+.radial-progress.p93 .circle.animate .fill,
+.radial-progress.site-avg.p93 .circle.animate .fill {
+  -webkit-transform: rotate(167.4deg);
+  -ms-transform: rotate(167.4deg);
+  transform: rotate(167.4deg);
+}
+.radial-progress.p93 .circle.animate .fill.fix,
+.radial-progress.site-avg.p93 .circle.animate .fill.fix {
+  -webkit-transform: rotate(334.8deg);
+  -ms-transform: rotate(334.8deg);
+  transform: rotate(334.8deg);
+}
+.radial-progress.p92 .circle.animate .mask.full,
+.radial-progress.site-avg.p92 .circle.animate .mask.full,
+.radial-progress.p92 .circle.animate .fill,
+.radial-progress.site-avg.p92 .circle.animate .fill {
+  -webkit-transform: rotate(165.6deg);
+  -ms-transform: rotate(165.6deg);
+  transform: rotate(165.6deg);
+}
+.radial-progress.p92 .circle.animate .fill.fix,
+.radial-progress.site-avg.p92 .circle.animate .fill.fix {
+  -webkit-transform: rotate(331.2deg);
+  -ms-transform: rotate(331.2deg);
+  transform: rotate(331.2deg);
+}
+.radial-progress.p91 .circle.animate .mask.full,
+.radial-progress.site-avg.p91 .circle.animate .mask.full,
+.radial-progress.p91 .circle.animate .fill,
+.radial-progress.site-avg.p91 .circle.animate .fill {
+  -webkit-transform: rotate(163.8deg);
+  -ms-transform: rotate(163.8deg);
+  transform: rotate(163.8deg);
+}
+.radial-progress.p91 .circle.animate .fill.fix,
+.radial-progress.site-avg.p91 .circle.animate .fill.fix {
+  -webkit-transform: rotate(327.6deg);
+  -ms-transform: rotate(327.6deg);
+  transform: rotate(327.6deg);
+}
+.radial-progress.p90 .circle.animate .mask.full,
+.radial-progress.site-avg.p90 .circle.animate .mask.full,
+.radial-progress.p90 .circle.animate .fill,
+.radial-progress.site-avg.p90 .circle.animate .fill {
+  -webkit-transform: rotate(162deg);
+  -ms-transform: rotate(162deg);
+  transform: rotate(162deg);
+}
+.radial-progress.p90 .circle.animate .fill.fix,
+.radial-progress.site-avg.p90 .circle.animate .fill.fix {
+  -webkit-transform: rotate(324deg);
+  -ms-transform: rotate(324deg);
+  transform: rotate(324deg);
+}
+.radial-progress.p89 .circle.animate .mask.full,
+.radial-progress.site-avg.p89 .circle.animate .mask.full,
+.radial-progress.p89 .circle.animate .fill,
+.radial-progress.site-avg.p89 .circle.animate .fill {
+  -webkit-transform: rotate(160.20000000000002deg);
+  -ms-transform: rotate(160.20000000000002deg);
+  transform: rotate(160.20000000000002deg);
+}
+.radial-progress.p89 .circle.animate .fill.fix,
+.radial-progress.site-avg.p89 .circle.animate .fill.fix {
+  -webkit-transform: rotate(320.40000000000003deg);
+  -ms-transform: rotate(320.40000000000003deg);
+  transform: rotate(320.40000000000003deg);
+}
+.radial-progress.p88 .circle.animate .mask.full,
+.radial-progress.site-avg.p88 .circle.animate .mask.full,
+.radial-progress.p88 .circle.animate .fill,
+.radial-progress.site-avg.p88 .circle.animate .fill {
+  -webkit-transform: rotate(158.4deg);
+  -ms-transform: rotate(158.4deg);
+  transform: rotate(158.4deg);
+}
+.radial-progress.p88 .circle.animate .fill.fix,
+.radial-progress.site-avg.p88 .circle.animate .fill.fix {
+  -webkit-transform: rotate(316.8deg);
+  -ms-transform: rotate(316.8deg);
+  transform: rotate(316.8deg);
+}
+.radial-progress.p87 .circle.animate .mask.full,
+.radial-progress.site-avg.p87 .circle.animate .mask.full,
+.radial-progress.p87 .circle.animate .fill,
+.radial-progress.site-avg.p87 .circle.animate .fill {
+  -webkit-transform: rotate(156.6deg);
+  -ms-transform: rotate(156.6deg);
+  transform: rotate(156.6deg);
+}
+.radial-progress.p87 .circle.animate .fill.fix,
+.radial-progress.site-avg.p87 .circle.animate .fill.fix {
+  -webkit-transform: rotate(313.2deg);
+  -ms-transform: rotate(313.2deg);
+  transform: rotate(313.2deg);
+}
+.radial-progress.p86 .circle.animate .mask.full,
+.radial-progress.site-avg.p86 .circle.animate .mask.full,
+.radial-progress.p86 .circle.animate .fill,
+.radial-progress.site-avg.p86 .circle.animate .fill {
+  -webkit-transform: rotate(154.8deg);
+  -ms-transform: rotate(154.8deg);
+  transform: rotate(154.8deg);
+}
+.radial-progress.p86 .circle.animate .fill.fix,
+.radial-progress.site-avg.p86 .circle.animate .fill.fix {
+  -webkit-transform: rotate(309.6deg);
+  -ms-transform: rotate(309.6deg);
+  transform: rotate(309.6deg);
+}
+.radial-progress.p85 .circle.animate .mask.full,
+.radial-progress.site-avg.p85 .circle.animate .mask.full,
+.radial-progress.p85 .circle.animate .fill,
+.radial-progress.site-avg.p85 .circle.animate .fill {
+  -webkit-transform: rotate(153deg);
+  -ms-transform: rotate(153deg);
+  transform: rotate(153deg);
+}
+.radial-progress.p85 .circle.animate .fill.fix,
+.radial-progress.site-avg.p85 .circle.animate .fill.fix {
+  -webkit-transform: rotate(306deg);
+  -ms-transform: rotate(306deg);
+  transform: rotate(306deg);
+}
+.radial-progress.p84 .circle.animate .mask.full,
+.radial-progress.site-avg.p84 .circle.animate .mask.full,
+.radial-progress.p84 .circle.animate .fill,
+.radial-progress.site-avg.p84 .circle.animate .fill {
+  -webkit-transform: rotate(151.20000000000002deg);
+  -ms-transform: rotate(151.20000000000002deg);
+  transform: rotate(151.20000000000002deg);
+}
+.radial-progress.p84 .circle.animate .fill.fix,
+.radial-progress.site-avg.p84 .circle.animate .fill.fix {
+  -webkit-transform: rotate(302.40000000000003deg);
+  -ms-transform: rotate(302.40000000000003deg);
+  transform: rotate(302.40000000000003deg);
+}
+.radial-progress.p83 .circle.animate .mask.full,
+.radial-progress.site-avg.p83 .circle.animate .mask.full,
+.radial-progress.p83 .circle.animate .fill,
+.radial-progress.site-avg.p83 .circle.animate .fill {
+  -webkit-transform: rotate(149.4deg);
+  -ms-transform: rotate(149.4deg);
+  transform: rotate(149.4deg);
+}
+.radial-progress.p83 .circle.animate .fill.fix,
+.radial-progress.site-avg.p83 .circle.animate .fill.fix {
+  -webkit-transform: rotate(298.8deg);
+  -ms-transform: rotate(298.8deg);
+  transform: rotate(298.8deg);
+}
+.radial-progress.p82 .circle.animate .mask.full,
+.radial-progress.site-avg.p82 .circle.animate .mask.full,
+.radial-progress.p82 .circle.animate .fill,
+.radial-progress.site-avg.p82 .circle.animate .fill {
+  -webkit-transform: rotate(147.6deg);
+  -ms-transform: rotate(147.6deg);
+  transform: rotate(147.6deg);
+}
+.radial-progress.p82 .circle.animate .fill.fix,
+.radial-progress.site-avg.p82 .circle.animate .fill.fix {
+  -webkit-transform: rotate(295.2deg);
+  -ms-transform: rotate(295.2deg);
+  transform: rotate(295.2deg);
+}
+.radial-progress.p81 .circle.animate .mask.full,
+.radial-progress.site-avg.p81 .circle.animate .mask.full,
+.radial-progress.p81 .circle.animate .fill,
+.radial-progress.site-avg.p81 .circle.animate .fill {
+  -webkit-transform: rotate(145.8deg);
+  -ms-transform: rotate(145.8deg);
+  transform: rotate(145.8deg);
+}
+.radial-progress.p81 .circle.animate .fill.fix,
+.radial-progress.site-avg.p81 .circle.animate .fill.fix {
+  -webkit-transform: rotate(291.6deg);
+  -ms-transform: rotate(291.6deg);
+  transform: rotate(291.6deg);
+}
+.radial-progress.p80 .circle.animate .mask.full,
+.radial-progress.site-avg.p80 .circle.animate .mask.full,
+.radial-progress.p80 .circle.animate .fill,
+.radial-progress.site-avg.p80 .circle.animate .fill {
+  -webkit-transform: rotate(144deg);
+  -ms-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+.radial-progress.p80 .circle.animate .fill.fix,
+.radial-progress.site-avg.p80 .circle.animate .fill.fix {
+  -webkit-transform: rotate(288deg);
+  -ms-transform: rotate(288deg);
+  transform: rotate(288deg);
+}
+.radial-progress.p79 .circle.animate .mask.full,
+.radial-progress.site-avg.p79 .circle.animate .mask.full,
+.radial-progress.p79 .circle.animate .fill,
+.radial-progress.site-avg.p79 .circle.animate .fill {
+  -webkit-transform: rotate(142.20000000000002deg);
+  -ms-transform: rotate(142.20000000000002deg);
+  transform: rotate(142.20000000000002deg);
+}
+.radial-progress.p79 .circle.animate .fill.fix,
+.radial-progress.site-avg.p79 .circle.animate .fill.fix {
+  -webkit-transform: rotate(284.40000000000003deg);
+  -ms-transform: rotate(284.40000000000003deg);
+  transform: rotate(284.40000000000003deg);
+}
+.radial-progress.p78 .circle.animate .mask.full,
+.radial-progress.site-avg.p78 .circle.animate .mask.full,
+.radial-progress.p78 .circle.animate .fill,
+.radial-progress.site-avg.p78 .circle.animate .fill {
+  -webkit-transform: rotate(140.4deg);
+  -ms-transform: rotate(140.4deg);
+  transform: rotate(140.4deg);
+}
+.radial-progress.p78 .circle.animate .fill.fix,
+.radial-progress.site-avg.p78 .circle.animate .fill.fix {
+  -webkit-transform: rotate(280.8deg);
+  -ms-transform: rotate(280.8deg);
+  transform: rotate(280.8deg);
+}
+.radial-progress.p77 .circle.animate .mask.full,
+.radial-progress.site-avg.p77 .circle.animate .mask.full,
+.radial-progress.p77 .circle.animate .fill,
+.radial-progress.site-avg.p77 .circle.animate .fill {
+  -webkit-transform: rotate(138.6deg);
+  -ms-transform: rotate(138.6deg);
+  transform: rotate(138.6deg);
+}
+.radial-progress.p77 .circle.animate .fill.fix,
+.radial-progress.site-avg.p77 .circle.animate .fill.fix {
+  -webkit-transform: rotate(277.2deg);
+  -ms-transform: rotate(277.2deg);
+  transform: rotate(277.2deg);
+}
+.radial-progress.p76 .circle.animate .mask.full,
+.radial-progress.site-avg.p76 .circle.animate .mask.full,
+.radial-progress.p76 .circle.animate .fill,
+.radial-progress.site-avg.p76 .circle.animate .fill {
+  -webkit-transform: rotate(136.8deg);
+  -ms-transform: rotate(136.8deg);
+  transform: rotate(136.8deg);
+}
+.radial-progress.p76 .circle.animate .fill.fix,
+.radial-progress.site-avg.p76 .circle.animate .fill.fix {
+  -webkit-transform: rotate(273.6deg);
+  -ms-transform: rotate(273.6deg);
+  transform: rotate(273.6deg);
+}
+.radial-progress.p75 .circle.animate .mask.full,
+.radial-progress.site-avg.p75 .circle.animate .mask.full,
+.radial-progress.p75 .circle.animate .fill,
+.radial-progress.site-avg.p75 .circle.animate .fill {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.radial-progress.p75 .circle.animate .fill.fix,
+.radial-progress.site-avg.p75 .circle.animate .fill.fix {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.radial-progress.p74 .circle.animate .mask.full,
+.radial-progress.site-avg.p74 .circle.animate .mask.full,
+.radial-progress.p74 .circle.animate .fill,
+.radial-progress.site-avg.p74 .circle.animate .fill {
+  -webkit-transform: rotate(133.20000000000002deg);
+  -ms-transform: rotate(133.20000000000002deg);
+  transform: rotate(133.20000000000002deg);
+}
+.radial-progress.p74 .circle.animate .fill.fix,
+.radial-progress.site-avg.p74 .circle.animate .fill.fix {
+  -webkit-transform: rotate(266.40000000000003deg);
+  -ms-transform: rotate(266.40000000000003deg);
+  transform: rotate(266.40000000000003deg);
+}
+.radial-progress.p73 .circle.animate .mask.full,
+.radial-progress.site-avg.p73 .circle.animate .mask.full,
+.radial-progress.p73 .circle.animate .fill,
+.radial-progress.site-avg.p73 .circle.animate .fill {
+  -webkit-transform: rotate(131.4deg);
+  -ms-transform: rotate(131.4deg);
+  transform: rotate(131.4deg);
+}
+.radial-progress.p73 .circle.animate .fill.fix,
+.radial-progress.site-avg.p73 .circle.animate .fill.fix {
+  -webkit-transform: rotate(262.8deg);
+  -ms-transform: rotate(262.8deg);
+  transform: rotate(262.8deg);
+}
+.radial-progress.p72 .circle.animate .mask.full,
+.radial-progress.site-avg.p72 .circle.animate .mask.full,
+.radial-progress.p72 .circle.animate .fill,
+.radial-progress.site-avg.p72 .circle.animate .fill {
+  -webkit-transform: rotate(129.6deg);
+  -ms-transform: rotate(129.6deg);
+  transform: rotate(129.6deg);
+}
+.radial-progress.p72 .circle.animate .fill.fix,
+.radial-progress.site-avg.p72 .circle.animate .fill.fix {
+  -webkit-transform: rotate(259.2deg);
+  -ms-transform: rotate(259.2deg);
+  transform: rotate(259.2deg);
+}
+.radial-progress.p71 .circle.animate .mask.full,
+.radial-progress.site-avg.p71 .circle.animate .mask.full,
+.radial-progress.p71 .circle.animate .fill,
+.radial-progress.site-avg.p71 .circle.animate .fill {
+  -webkit-transform: rotate(127.8deg);
+  -ms-transform: rotate(127.8deg);
+  transform: rotate(127.8deg);
+}
+.radial-progress.p71 .circle.animate .fill.fix,
+.radial-progress.site-avg.p71 .circle.animate .fill.fix {
+  -webkit-transform: rotate(255.6deg);
+  -ms-transform: rotate(255.6deg);
+  transform: rotate(255.6deg);
+}
+.radial-progress.p70 .circle.animate .mask.full,
+.radial-progress.site-avg.p70 .circle.animate .mask.full,
+.radial-progress.p70 .circle.animate .fill,
+.radial-progress.site-avg.p70 .circle.animate .fill {
+  -webkit-transform: rotate(126deg);
+  -ms-transform: rotate(126deg);
+  transform: rotate(126deg);
+}
+.radial-progress.p70 .circle.animate .fill.fix,
+.radial-progress.site-avg.p70 .circle.animate .fill.fix {
+  -webkit-transform: rotate(252deg);
+  -ms-transform: rotate(252deg);
+  transform: rotate(252deg);
+}
+.radial-progress.p69 .circle.animate .mask.full,
+.radial-progress.site-avg.p69 .circle.animate .mask.full,
+.radial-progress.p69 .circle.animate .fill,
+.radial-progress.site-avg.p69 .circle.animate .fill {
+  -webkit-transform: rotate(124.2deg);
+  -ms-transform: rotate(124.2deg);
+  transform: rotate(124.2deg);
+}
+.radial-progress.p69 .circle.animate .fill.fix,
+.radial-progress.site-avg.p69 .circle.animate .fill.fix {
+  -webkit-transform: rotate(248.4deg);
+  -ms-transform: rotate(248.4deg);
+  transform: rotate(248.4deg);
+}
+.radial-progress.p68 .circle.animate .mask.full,
+.radial-progress.site-avg.p68 .circle.animate .mask.full,
+.radial-progress.p68 .circle.animate .fill,
+.radial-progress.site-avg.p68 .circle.animate .fill {
+  -webkit-transform: rotate(122.4deg);
+  -ms-transform: rotate(122.4deg);
+  transform: rotate(122.4deg);
+}
+.radial-progress.p68 .circle.animate .fill.fix,
+.radial-progress.site-avg.p68 .circle.animate .fill.fix {
+  -webkit-transform: rotate(244.8deg);
+  -ms-transform: rotate(244.8deg);
+  transform: rotate(244.8deg);
+}
+.radial-progress.p67 .circle.animate .mask.full,
+.radial-progress.site-avg.p67 .circle.animate .mask.full,
+.radial-progress.p67 .circle.animate .fill,
+.radial-progress.site-avg.p67 .circle.animate .fill {
+  -webkit-transform: rotate(120.60000000000001deg);
+  -ms-transform: rotate(120.60000000000001deg);
+  transform: rotate(120.60000000000001deg);
+}
+.radial-progress.p67 .circle.animate .fill.fix,
+.radial-progress.site-avg.p67 .circle.animate .fill.fix {
+  -webkit-transform: rotate(241.20000000000002deg);
+  -ms-transform: rotate(241.20000000000002deg);
+  transform: rotate(241.20000000000002deg);
+}
+.radial-progress.p66 .circle.animate .mask.full,
+.radial-progress.site-avg.p66 .circle.animate .mask.full,
+.radial-progress.p66 .circle.animate .fill,
+.radial-progress.site-avg.p66 .circle.animate .fill {
+  -webkit-transform: rotate(118.8deg);
+  -ms-transform: rotate(118.8deg);
+  transform: rotate(118.8deg);
+}
+.radial-progress.p66 .circle.animate .fill.fix,
+.radial-progress.site-avg.p66 .circle.animate .fill.fix {
+  -webkit-transform: rotate(237.6deg);
+  -ms-transform: rotate(237.6deg);
+  transform: rotate(237.6deg);
+}
+.radial-progress.p65 .circle.animate .mask.full,
+.radial-progress.site-avg.p65 .circle.animate .mask.full,
+.radial-progress.p65 .circle.animate .fill,
+.radial-progress.site-avg.p65 .circle.animate .fill {
+  -webkit-transform: rotate(117deg);
+  -ms-transform: rotate(117deg);
+  transform: rotate(117deg);
+}
+.radial-progress.p65 .circle.animate .fill.fix,
+.radial-progress.site-avg.p65 .circle.animate .fill.fix {
+  -webkit-transform: rotate(234deg);
+  -ms-transform: rotate(234deg);
+  transform: rotate(234deg);
+}
+.radial-progress.p64 .circle.animate .mask.full,
+.radial-progress.site-avg.p64 .circle.animate .mask.full,
+.radial-progress.p64 .circle.animate .fill,
+.radial-progress.site-avg.p64 .circle.animate .fill {
+  -webkit-transform: rotate(115.2deg);
+  -ms-transform: rotate(115.2deg);
+  transform: rotate(115.2deg);
+}
+.radial-progress.p64 .circle.animate .fill.fix,
+.radial-progress.site-avg.p64 .circle.animate .fill.fix {
+  -webkit-transform: rotate(230.4deg);
+  -ms-transform: rotate(230.4deg);
+  transform: rotate(230.4deg);
+}
+.radial-progress.p63 .circle.animate .mask.full,
+.radial-progress.site-avg.p63 .circle.animate .mask.full,
+.radial-progress.p63 .circle.animate .fill,
+.radial-progress.site-avg.p63 .circle.animate .fill {
+  -webkit-transform: rotate(113.4deg);
+  -ms-transform: rotate(113.4deg);
+  transform: rotate(113.4deg);
+}
+.radial-progress.p63 .circle.animate .fill.fix,
+.radial-progress.site-avg.p63 .circle.animate .fill.fix {
+  -webkit-transform: rotate(226.8deg);
+  -ms-transform: rotate(226.8deg);
+  transform: rotate(226.8deg);
+}
+.radial-progress.p62 .circle.animate .mask.full,
+.radial-progress.site-avg.p62 .circle.animate .mask.full,
+.radial-progress.p62 .circle.animate .fill,
+.radial-progress.site-avg.p62 .circle.animate .fill {
+  -webkit-transform: rotate(111.60000000000001deg);
+  -ms-transform: rotate(111.60000000000001deg);
+  transform: rotate(111.60000000000001deg);
+}
+.radial-progress.p62 .circle.animate .fill.fix,
+.radial-progress.site-avg.p62 .circle.animate .fill.fix {
+  -webkit-transform: rotate(223.20000000000002deg);
+  -ms-transform: rotate(223.20000000000002deg);
+  transform: rotate(223.20000000000002deg);
+}
+.radial-progress.p61 .circle.animate .mask.full,
+.radial-progress.site-avg.p61 .circle.animate .mask.full,
+.radial-progress.p61 .circle.animate .fill,
+.radial-progress.site-avg.p61 .circle.animate .fill {
+  -webkit-transform: rotate(109.8deg);
+  -ms-transform: rotate(109.8deg);
+  transform: rotate(109.8deg);
+}
+.radial-progress.p61 .circle.animate .fill.fix,
+.radial-progress.site-avg.p61 .circle.animate .fill.fix {
+  -webkit-transform: rotate(219.6deg);
+  -ms-transform: rotate(219.6deg);
+  transform: rotate(219.6deg);
+}
+.radial-progress.p60 .circle.animate .mask.full,
+.radial-progress.site-avg.p60 .circle.animate .mask.full,
+.radial-progress.p60 .circle.animate .fill,
+.radial-progress.site-avg.p60 .circle.animate .fill {
+  -webkit-transform: rotate(108deg);
+  -ms-transform: rotate(108deg);
+  transform: rotate(108deg);
+}
+.radial-progress.p60 .circle.animate .fill.fix,
+.radial-progress.site-avg.p60 .circle.animate .fill.fix {
+  -webkit-transform: rotate(216deg);
+  -ms-transform: rotate(216deg);
+  transform: rotate(216deg);
+}
+.radial-progress.p59 .circle.animate .mask.full,
+.radial-progress.site-avg.p59 .circle.animate .mask.full,
+.radial-progress.p59 .circle.animate .fill,
+.radial-progress.site-avg.p59 .circle.animate .fill {
+  -webkit-transform: rotate(106.2deg);
+  -ms-transform: rotate(106.2deg);
+  transform: rotate(106.2deg);
+}
+.radial-progress.p59 .circle.animate .fill.fix,
+.radial-progress.site-avg.p59 .circle.animate .fill.fix {
+  -webkit-transform: rotate(212.4deg);
+  -ms-transform: rotate(212.4deg);
+  transform: rotate(212.4deg);
+}
+.radial-progress.p58 .circle.animate .mask.full,
+.radial-progress.site-avg.p58 .circle.animate .mask.full,
+.radial-progress.p58 .circle.animate .fill,
+.radial-progress.site-avg.p58 .circle.animate .fill {
+  -webkit-transform: rotate(104.4deg);
+  -ms-transform: rotate(104.4deg);
+  transform: rotate(104.4deg);
+}
+.radial-progress.p58 .circle.animate .fill.fix,
+.radial-progress.site-avg.p58 .circle.animate .fill.fix {
+  -webkit-transform: rotate(208.8deg);
+  -ms-transform: rotate(208.8deg);
+  transform: rotate(208.8deg);
+}
+.radial-progress.p57 .circle.animate .mask.full,
+.radial-progress.site-avg.p57 .circle.animate .mask.full,
+.radial-progress.p57 .circle.animate .fill,
+.radial-progress.site-avg.p57 .circle.animate .fill {
+  -webkit-transform: rotate(102.60000000000001deg);
+  -ms-transform: rotate(102.60000000000001deg);
+  transform: rotate(102.60000000000001deg);
+}
+.radial-progress.p57 .circle.animate .fill.fix,
+.radial-progress.site-avg.p57 .circle.animate .fill.fix {
+  -webkit-transform: rotate(205.20000000000002deg);
+  -ms-transform: rotate(205.20000000000002deg);
+  transform: rotate(205.20000000000002deg);
+}
+.radial-progress.p56 .circle.animate .mask.full,
+.radial-progress.site-avg.p56 .circle.animate .mask.full,
+.radial-progress.p56 .circle.animate .fill,
+.radial-progress.site-avg.p56 .circle.animate .fill {
+  -webkit-transform: rotate(100.8deg);
+  -ms-transform: rotate(100.8deg);
+  transform: rotate(100.8deg);
+}
+.radial-progress.p56 .circle.animate .fill.fix,
+.radial-progress.site-avg.p56 .circle.animate .fill.fix {
+  -webkit-transform: rotate(201.6deg);
+  -ms-transform: rotate(201.6deg);
+  transform: rotate(201.6deg);
+}
+.radial-progress.p55 .circle.animate .mask.full,
+.radial-progress.site-avg.p55 .circle.animate .mask.full,
+.radial-progress.p55 .circle.animate .fill,
+.radial-progress.site-avg.p55 .circle.animate .fill {
+  -webkit-transform: rotate(99deg);
+  -ms-transform: rotate(99deg);
+  transform: rotate(99deg);
+}
+.radial-progress.p55 .circle.animate .fill.fix,
+.radial-progress.site-avg.p55 .circle.animate .fill.fix {
+  -webkit-transform: rotate(198deg);
+  -ms-transform: rotate(198deg);
+  transform: rotate(198deg);
+}
+.radial-progress.p54 .circle.animate .mask.full,
+.radial-progress.site-avg.p54 .circle.animate .mask.full,
+.radial-progress.p54 .circle.animate .fill,
+.radial-progress.site-avg.p54 .circle.animate .fill {
+  -webkit-transform: rotate(97.2deg);
+  -ms-transform: rotate(97.2deg);
+  transform: rotate(97.2deg);
+}
+.radial-progress.p54 .circle.animate .fill.fix,
+.radial-progress.site-avg.p54 .circle.animate .fill.fix {
+  -webkit-transform: rotate(194.4deg);
+  -ms-transform: rotate(194.4deg);
+  transform: rotate(194.4deg);
+}
+.radial-progress.p53 .circle.animate .mask.full,
+.radial-progress.site-avg.p53 .circle.animate .mask.full,
+.radial-progress.p53 .circle.animate .fill,
+.radial-progress.site-avg.p53 .circle.animate .fill {
+  -webkit-transform: rotate(95.4deg);
+  -ms-transform: rotate(95.4deg);
+  transform: rotate(95.4deg);
+}
+.radial-progress.p53 .circle.animate .fill.fix,
+.radial-progress.site-avg.p53 .circle.animate .fill.fix {
+  -webkit-transform: rotate(190.8deg);
+  -ms-transform: rotate(190.8deg);
+  transform: rotate(190.8deg);
+}
+.radial-progress.p52 .circle.animate .mask.full,
+.radial-progress.site-avg.p52 .circle.animate .mask.full,
+.radial-progress.p52 .circle.animate .fill,
+.radial-progress.site-avg.p52 .circle.animate .fill {
+  -webkit-transform: rotate(93.60000000000001deg);
+  -ms-transform: rotate(93.60000000000001deg);
+  transform: rotate(93.60000000000001deg);
+}
+.radial-progress.p52 .circle.animate .fill.fix,
+.radial-progress.site-avg.p52 .circle.animate .fill.fix {
+  -webkit-transform: rotate(187.20000000000002deg);
+  -ms-transform: rotate(187.20000000000002deg);
+  transform: rotate(187.20000000000002deg);
+}
+.radial-progress.p51 .circle.animate .mask.full,
+.radial-progress.site-avg.p51 .circle.animate .mask.full,
+.radial-progress.p51 .circle.animate .fill,
+.radial-progress.site-avg.p51 .circle.animate .fill {
+  -webkit-transform: rotate(91.8deg);
+  -ms-transform: rotate(91.8deg);
+  transform: rotate(91.8deg);
+}
+.radial-progress.p51 .circle.animate .fill.fix,
+.radial-progress.site-avg.p51 .circle.animate .fill.fix {
+  -webkit-transform: rotate(183.6deg);
+  -ms-transform: rotate(183.6deg);
+  transform: rotate(183.6deg);
+}
+.radial-progress.p50 .circle.animate .mask.full,
+.radial-progress.site-avg.p50 .circle.animate .mask.full,
+.radial-progress.p50 .circle.animate .fill,
+.radial-progress.site-avg.p50 .circle.animate .fill {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.radial-progress.p50 .circle.animate .fill.fix,
+.radial-progress.site-avg.p50 .circle.animate .fill.fix {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.radial-progress.p49 .circle.animate .mask.full,
+.radial-progress.site-avg.p49 .circle.animate .mask.full,
+.radial-progress.p49 .circle.animate .fill,
+.radial-progress.site-avg.p49 .circle.animate .fill {
+  -webkit-transform: rotate(88.2deg);
+  -ms-transform: rotate(88.2deg);
+  transform: rotate(88.2deg);
+}
+.radial-progress.p49 .circle.animate .fill.fix,
+.radial-progress.site-avg.p49 .circle.animate .fill.fix {
+  -webkit-transform: rotate(176.4deg);
+  -ms-transform: rotate(176.4deg);
+  transform: rotate(176.4deg);
+}
+.radial-progress.p48 .circle.animate .mask.full,
+.radial-progress.site-avg.p48 .circle.animate .mask.full,
+.radial-progress.p48 .circle.animate .fill,
+.radial-progress.site-avg.p48 .circle.animate .fill {
+  -webkit-transform: rotate(86.4deg);
+  -ms-transform: rotate(86.4deg);
+  transform: rotate(86.4deg);
+}
+.radial-progress.p48 .circle.animate .fill.fix,
+.radial-progress.site-avg.p48 .circle.animate .fill.fix {
+  -webkit-transform: rotate(172.8deg);
+  -ms-transform: rotate(172.8deg);
+  transform: rotate(172.8deg);
+}
+.radial-progress.p47 .circle.animate .mask.full,
+.radial-progress.site-avg.p47 .circle.animate .mask.full,
+.radial-progress.p47 .circle.animate .fill,
+.radial-progress.site-avg.p47 .circle.animate .fill {
+  -webkit-transform: rotate(84.60000000000001deg);
+  -ms-transform: rotate(84.60000000000001deg);
+  transform: rotate(84.60000000000001deg);
+}
+.radial-progress.p47 .circle.animate .fill.fix,
+.radial-progress.site-avg.p47 .circle.animate .fill.fix {
+  -webkit-transform: rotate(169.20000000000002deg);
+  -ms-transform: rotate(169.20000000000002deg);
+  transform: rotate(169.20000000000002deg);
+}
+.radial-progress.p46 .circle.animate .mask.full,
+.radial-progress.site-avg.p46 .circle.animate .mask.full,
+.radial-progress.p46 .circle.animate .fill,
+.radial-progress.site-avg.p46 .circle.animate .fill {
+  -webkit-transform: rotate(82.8deg);
+  -ms-transform: rotate(82.8deg);
+  transform: rotate(82.8deg);
+}
+.radial-progress.p46 .circle.animate .fill.fix,
+.radial-progress.site-avg.p46 .circle.animate .fill.fix {
+  -webkit-transform: rotate(165.6deg);
+  -ms-transform: rotate(165.6deg);
+  transform: rotate(165.6deg);
+}
+.radial-progress.p45 .circle.animate .mask.full,
+.radial-progress.site-avg.p45 .circle.animate .mask.full,
+.radial-progress.p45 .circle.animate .fill,
+.radial-progress.site-avg.p45 .circle.animate .fill {
+  -webkit-transform: rotate(81deg);
+  -ms-transform: rotate(81deg);
+  transform: rotate(81deg);
+}
+.radial-progress.p45 .circle.animate .fill.fix,
+.radial-progress.site-avg.p45 .circle.animate .fill.fix {
+  -webkit-transform: rotate(162deg);
+  -ms-transform: rotate(162deg);
+  transform: rotate(162deg);
+}
+.radial-progress.p44 .circle.animate .mask.full,
+.radial-progress.site-avg.p44 .circle.animate .mask.full,
+.radial-progress.p44 .circle.animate .fill,
+.radial-progress.site-avg.p44 .circle.animate .fill {
+  -webkit-transform: rotate(79.2deg);
+  -ms-transform: rotate(79.2deg);
+  transform: rotate(79.2deg);
+}
+.radial-progress.p44 .circle.animate .fill.fix,
+.radial-progress.site-avg.p44 .circle.animate .fill.fix {
+  -webkit-transform: rotate(158.4deg);
+  -ms-transform: rotate(158.4deg);
+  transform: rotate(158.4deg);
+}
+.radial-progress.p43 .circle.animate .mask.full,
+.radial-progress.site-avg.p43 .circle.animate .mask.full,
+.radial-progress.p43 .circle.animate .fill,
+.radial-progress.site-avg.p43 .circle.animate .fill {
+  -webkit-transform: rotate(77.4deg);
+  -ms-transform: rotate(77.4deg);
+  transform: rotate(77.4deg);
+}
+.radial-progress.p43 .circle.animate .fill.fix,
+.radial-progress.site-avg.p43 .circle.animate .fill.fix {
+  -webkit-transform: rotate(154.8deg);
+  -ms-transform: rotate(154.8deg);
+  transform: rotate(154.8deg);
+}
+.radial-progress.p42 .circle.animate .mask.full,
+.radial-progress.site-avg.p42 .circle.animate .mask.full,
+.radial-progress.p42 .circle.animate .fill,
+.radial-progress.site-avg.p42 .circle.animate .fill {
+  -webkit-transform: rotate(75.60000000000001deg);
+  -ms-transform: rotate(75.60000000000001deg);
+  transform: rotate(75.60000000000001deg);
+}
+.radial-progress.p42 .circle.animate .fill.fix,
+.radial-progress.site-avg.p42 .circle.animate .fill.fix {
+  -webkit-transform: rotate(151.20000000000002deg);
+  -ms-transform: rotate(151.20000000000002deg);
+  transform: rotate(151.20000000000002deg);
+}
+.radial-progress.p41 .circle.animate .mask.full,
+.radial-progress.site-avg.p41 .circle.animate .mask.full,
+.radial-progress.p41 .circle.animate .fill,
+.radial-progress.site-avg.p41 .circle.animate .fill {
+  -webkit-transform: rotate(73.8deg);
+  -ms-transform: rotate(73.8deg);
+  transform: rotate(73.8deg);
+}
+.radial-progress.p41 .circle.animate .fill.fix,
+.radial-progress.site-avg.p41 .circle.animate .fill.fix {
+  -webkit-transform: rotate(147.6deg);
+  -ms-transform: rotate(147.6deg);
+  transform: rotate(147.6deg);
+}
+.radial-progress.p40 .circle.animate .mask.full,
+.radial-progress.site-avg.p40 .circle.animate .mask.full,
+.radial-progress.p40 .circle.animate .fill,
+.radial-progress.site-avg.p40 .circle.animate .fill {
+  -webkit-transform: rotate(72deg);
+  -ms-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.radial-progress.p40 .circle.animate .fill.fix,
+.radial-progress.site-avg.p40 .circle.animate .fill.fix {
+  -webkit-transform: rotate(144deg);
+  -ms-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+.radial-progress.p39 .circle.animate .mask.full,
+.radial-progress.site-avg.p39 .circle.animate .mask.full,
+.radial-progress.p39 .circle.animate .fill,
+.radial-progress.site-avg.p39 .circle.animate .fill {
+  -webkit-transform: rotate(70.2deg);
+  -ms-transform: rotate(70.2deg);
+  transform: rotate(70.2deg);
+}
+.radial-progress.p39 .circle.animate .fill.fix,
+.radial-progress.site-avg.p39 .circle.animate .fill.fix {
+  -webkit-transform: rotate(140.4deg);
+  -ms-transform: rotate(140.4deg);
+  transform: rotate(140.4deg);
+}
+.radial-progress.p38 .circle.animate .mask.full,
+.radial-progress.site-avg.p38 .circle.animate .mask.full,
+.radial-progress.p38 .circle.animate .fill,
+.radial-progress.site-avg.p38 .circle.animate .fill {
+  -webkit-transform: rotate(68.4deg);
+  -ms-transform: rotate(68.4deg);
+  transform: rotate(68.4deg);
+}
+.radial-progress.p38 .circle.animate .fill.fix,
+.radial-progress.site-avg.p38 .circle.animate .fill.fix {
+  -webkit-transform: rotate(136.8deg);
+  -ms-transform: rotate(136.8deg);
+  transform: rotate(136.8deg);
+}
+.radial-progress.p37 .circle.animate .mask.full,
+.radial-progress.site-avg.p37 .circle.animate .mask.full,
+.radial-progress.p37 .circle.animate .fill,
+.radial-progress.site-avg.p37 .circle.animate .fill {
+  -webkit-transform: rotate(66.60000000000001deg);
+  -ms-transform: rotate(66.60000000000001deg);
+  transform: rotate(66.60000000000001deg);
+}
+.radial-progress.p37 .circle.animate .fill.fix,
+.radial-progress.site-avg.p37 .circle.animate .fill.fix {
+  -webkit-transform: rotate(133.20000000000002deg);
+  -ms-transform: rotate(133.20000000000002deg);
+  transform: rotate(133.20000000000002deg);
+}
+.radial-progress.p36 .circle.animate .mask.full,
+.radial-progress.site-avg.p36 .circle.animate .mask.full,
+.radial-progress.p36 .circle.animate .fill,
+.radial-progress.site-avg.p36 .circle.animate .fill {
+  -webkit-transform: rotate(64.8deg);
+  -ms-transform: rotate(64.8deg);
+  transform: rotate(64.8deg);
+}
+.radial-progress.p36 .circle.animate .fill.fix,
+.radial-progress.site-avg.p36 .circle.animate .fill.fix {
+  -webkit-transform: rotate(129.6deg);
+  -ms-transform: rotate(129.6deg);
+  transform: rotate(129.6deg);
+}
+.radial-progress.p35 .circle.animate .mask.full,
+.radial-progress.site-avg.p35 .circle.animate .mask.full,
+.radial-progress.p35 .circle.animate .fill,
+.radial-progress.site-avg.p35 .circle.animate .fill {
+  -webkit-transform: rotate(63deg);
+  -ms-transform: rotate(63deg);
+  transform: rotate(63deg);
+}
+.radial-progress.p35 .circle.animate .fill.fix,
+.radial-progress.site-avg.p35 .circle.animate .fill.fix {
+  -webkit-transform: rotate(126deg);
+  -ms-transform: rotate(126deg);
+  transform: rotate(126deg);
+}
+.radial-progress.p34 .circle.animate .mask.full,
+.radial-progress.site-avg.p34 .circle.animate .mask.full,
+.radial-progress.p34 .circle.animate .fill,
+.radial-progress.site-avg.p34 .circle.animate .fill {
+  -webkit-transform: rotate(61.2deg);
+  -ms-transform: rotate(61.2deg);
+  transform: rotate(61.2deg);
+}
+.radial-progress.p34 .circle.animate .fill.fix,
+.radial-progress.site-avg.p34 .circle.animate .fill.fix {
+  -webkit-transform: rotate(122.4deg);
+  -ms-transform: rotate(122.4deg);
+  transform: rotate(122.4deg);
+}
+.radial-progress.p33 .circle.animate .mask.full,
+.radial-progress.site-avg.p33 .circle.animate .mask.full,
+.radial-progress.p33 .circle.animate .fill,
+.radial-progress.site-avg.p33 .circle.animate .fill {
+  -webkit-transform: rotate(59.4deg);
+  -ms-transform: rotate(59.4deg);
+  transform: rotate(59.4deg);
+}
+.radial-progress.p33 .circle.animate .fill.fix,
+.radial-progress.site-avg.p33 .circle.animate .fill.fix {
+  -webkit-transform: rotate(118.8deg);
+  -ms-transform: rotate(118.8deg);
+  transform: rotate(118.8deg);
+}
+.radial-progress.p32 .circle.animate .mask.full,
+.radial-progress.site-avg.p32 .circle.animate .mask.full,
+.radial-progress.p32 .circle.animate .fill,
+.radial-progress.site-avg.p32 .circle.animate .fill {
+  -webkit-transform: rotate(57.6deg);
+  -ms-transform: rotate(57.6deg);
+  transform: rotate(57.6deg);
+}
+.radial-progress.p32 .circle.animate .fill.fix,
+.radial-progress.site-avg.p32 .circle.animate .fill.fix {
+  -webkit-transform: rotate(115.2deg);
+  -ms-transform: rotate(115.2deg);
+  transform: rotate(115.2deg);
+}
+.radial-progress.p31 .circle.animate .mask.full,
+.radial-progress.site-avg.p31 .circle.animate .mask.full,
+.radial-progress.p31 .circle.animate .fill,
+.radial-progress.site-avg.p31 .circle.animate .fill {
+  -webkit-transform: rotate(55.800000000000004deg);
+  -ms-transform: rotate(55.800000000000004deg);
+  transform: rotate(55.800000000000004deg);
+}
+.radial-progress.p31 .circle.animate .fill.fix,
+.radial-progress.site-avg.p31 .circle.animate .fill.fix {
+  -webkit-transform: rotate(111.60000000000001deg);
+  -ms-transform: rotate(111.60000000000001deg);
+  transform: rotate(111.60000000000001deg);
+}
+.radial-progress.p30 .circle.animate .mask.full,
+.radial-progress.site-avg.p30 .circle.animate .mask.full,
+.radial-progress.p30 .circle.animate .fill,
+.radial-progress.site-avg.p30 .circle.animate .fill {
+  -webkit-transform: rotate(54deg);
+  -ms-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+.radial-progress.p30 .circle.animate .fill.fix,
+.radial-progress.site-avg.p30 .circle.animate .fill.fix {
+  -webkit-transform: rotate(108deg);
+  -ms-transform: rotate(108deg);
+  transform: rotate(108deg);
+}
+.radial-progress.p29 .circle.animate .mask.full,
+.radial-progress.site-avg.p29 .circle.animate .mask.full,
+.radial-progress.p29 .circle.animate .fill,
+.radial-progress.site-avg.p29 .circle.animate .fill {
+  -webkit-transform: rotate(52.2deg);
+  -ms-transform: rotate(52.2deg);
+  transform: rotate(52.2deg);
+}
+.radial-progress.p29 .circle.animate .fill.fix,
+.radial-progress.site-avg.p29 .circle.animate .fill.fix {
+  -webkit-transform: rotate(104.4deg);
+  -ms-transform: rotate(104.4deg);
+  transform: rotate(104.4deg);
+}
+.radial-progress.p28 .circle.animate .mask.full,
+.radial-progress.site-avg.p28 .circle.animate .mask.full,
+.radial-progress.p28 .circle.animate .fill,
+.radial-progress.site-avg.p28 .circle.animate .fill {
+  -webkit-transform: rotate(50.4deg);
+  -ms-transform: rotate(50.4deg);
+  transform: rotate(50.4deg);
+}
+.radial-progress.p28 .circle.animate .fill.fix,
+.radial-progress.site-avg.p28 .circle.animate .fill.fix {
+  -webkit-transform: rotate(100.8deg);
+  -ms-transform: rotate(100.8deg);
+  transform: rotate(100.8deg);
+}
+.radial-progress.p27 .circle.animate .mask.full,
+.radial-progress.site-avg.p27 .circle.animate .mask.full,
+.radial-progress.p27 .circle.animate .fill,
+.radial-progress.site-avg.p27 .circle.animate .fill {
+  -webkit-transform: rotate(48.6deg);
+  -ms-transform: rotate(48.6deg);
+  transform: rotate(48.6deg);
+}
+.radial-progress.p27 .circle.animate .fill.fix,
+.radial-progress.site-avg.p27 .circle.animate .fill.fix {
+  -webkit-transform: rotate(97.2deg);
+  -ms-transform: rotate(97.2deg);
+  transform: rotate(97.2deg);
+}
+.radial-progress.p26 .circle.animate .mask.full,
+.radial-progress.site-avg.p26 .circle.animate .mask.full,
+.radial-progress.p26 .circle.animate .fill,
+.radial-progress.site-avg.p26 .circle.animate .fill {
+  -webkit-transform: rotate(46.800000000000004deg);
+  -ms-transform: rotate(46.800000000000004deg);
+  transform: rotate(46.800000000000004deg);
+}
+.radial-progress.p26 .circle.animate .fill.fix,
+.radial-progress.site-avg.p26 .circle.animate .fill.fix {
+  -webkit-transform: rotate(93.60000000000001deg);
+  -ms-transform: rotate(93.60000000000001deg);
+  transform: rotate(93.60000000000001deg);
+}
+.radial-progress.p25 .circle.animate .mask.full,
+.radial-progress.site-avg.p25 .circle.animate .mask.full,
+.radial-progress.p25 .circle.animate .fill,
+.radial-progress.site-avg.p25 .circle.animate .fill {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.radial-progress.p25 .circle.animate .fill.fix,
+.radial-progress.site-avg.p25 .circle.animate .fill.fix {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.radial-progress.p24 .circle.animate .mask.full,
+.radial-progress.site-avg.p24 .circle.animate .mask.full,
+.radial-progress.p24 .circle.animate .fill,
+.radial-progress.site-avg.p24 .circle.animate .fill {
+  -webkit-transform: rotate(43.2deg);
+  -ms-transform: rotate(43.2deg);
+  transform: rotate(43.2deg);
+}
+.radial-progress.p24 .circle.animate .fill.fix,
+.radial-progress.site-avg.p24 .circle.animate .fill.fix {
+  -webkit-transform: rotate(86.4deg);
+  -ms-transform: rotate(86.4deg);
+  transform: rotate(86.4deg);
+}
+.radial-progress.p23 .circle.animate .mask.full,
+.radial-progress.site-avg.p23 .circle.animate .mask.full,
+.radial-progress.p23 .circle.animate .fill,
+.radial-progress.site-avg.p23 .circle.animate .fill {
+  -webkit-transform: rotate(41.4deg);
+  -ms-transform: rotate(41.4deg);
+  transform: rotate(41.4deg);
+}
+.radial-progress.p23 .circle.animate .fill.fix,
+.radial-progress.site-avg.p23 .circle.animate .fill.fix {
+  -webkit-transform: rotate(82.8deg);
+  -ms-transform: rotate(82.8deg);
+  transform: rotate(82.8deg);
+}
+.radial-progress.p22 .circle.animate .mask.full,
+.radial-progress.site-avg.p22 .circle.animate .mask.full,
+.radial-progress.p22 .circle.animate .fill,
+.radial-progress.site-avg.p22 .circle.animate .fill {
+  -webkit-transform: rotate(39.6deg);
+  -ms-transform: rotate(39.6deg);
+  transform: rotate(39.6deg);
+}
+.radial-progress.p22 .circle.animate .fill.fix,
+.radial-progress.site-avg.p22 .circle.animate .fill.fix {
+  -webkit-transform: rotate(79.2deg);
+  -ms-transform: rotate(79.2deg);
+  transform: rotate(79.2deg);
+}
+.radial-progress.p21 .circle.animate .mask.full,
+.radial-progress.site-avg.p21 .circle.animate .mask.full,
+.radial-progress.p21 .circle.animate .fill,
+.radial-progress.site-avg.p21 .circle.animate .fill {
+  -webkit-transform: rotate(37.800000000000004deg);
+  -ms-transform: rotate(37.800000000000004deg);
+  transform: rotate(37.800000000000004deg);
+}
+.radial-progress.p21 .circle.animate .fill.fix,
+.radial-progress.site-avg.p21 .circle.animate .fill.fix {
+  -webkit-transform: rotate(75.60000000000001deg);
+  -ms-transform: rotate(75.60000000000001deg);
+  transform: rotate(75.60000000000001deg);
+}
+.radial-progress.p20 .circle.animate .mask.full,
+.radial-progress.site-avg.p20 .circle.animate .mask.full,
+.radial-progress.p20 .circle.animate .fill,
+.radial-progress.site-avg.p20 .circle.animate .fill {
+  -webkit-transform: rotate(36deg);
+  -ms-transform: rotate(36deg);
+  transform: rotate(36deg);
+}
+.radial-progress.p20 .circle.animate .fill.fix,
+.radial-progress.site-avg.p20 .circle.animate .fill.fix {
+  -webkit-transform: rotate(72deg);
+  -ms-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.radial-progress.p19 .circle.animate .mask.full,
+.radial-progress.site-avg.p19 .circle.animate .mask.full,
+.radial-progress.p19 .circle.animate .fill,
+.radial-progress.site-avg.p19 .circle.animate .fill {
+  -webkit-transform: rotate(34.2deg);
+  -ms-transform: rotate(34.2deg);
+  transform: rotate(34.2deg);
+}
+.radial-progress.p19 .circle.animate .fill.fix,
+.radial-progress.site-avg.p19 .circle.animate .fill.fix {
+  -webkit-transform: rotate(68.4deg);
+  -ms-transform: rotate(68.4deg);
+  transform: rotate(68.4deg);
+}
+.radial-progress.p18 .circle.animate .mask.full,
+.radial-progress.site-avg.p18 .circle.animate .mask.full,
+.radial-progress.p18 .circle.animate .fill,
+.radial-progress.site-avg.p18 .circle.animate .fill {
+  -webkit-transform: rotate(32.4deg);
+  -ms-transform: rotate(32.4deg);
+  transform: rotate(32.4deg);
+}
+.radial-progress.p18 .circle.animate .fill.fix,
+.radial-progress.site-avg.p18 .circle.animate .fill.fix {
+  -webkit-transform: rotate(64.8deg);
+  -ms-transform: rotate(64.8deg);
+  transform: rotate(64.8deg);
+}
+.radial-progress.p17 .circle.animate .mask.full,
+.radial-progress.site-avg.p17 .circle.animate .mask.full,
+.radial-progress.p17 .circle.animate .fill,
+.radial-progress.site-avg.p17 .circle.animate .fill {
+  -webkit-transform: rotate(30.6deg);
+  -ms-transform: rotate(30.6deg);
+  transform: rotate(30.6deg);
+}
+.radial-progress.p17 .circle.animate .fill.fix,
+.radial-progress.site-avg.p17 .circle.animate .fill.fix {
+  -webkit-transform: rotate(61.2deg);
+  -ms-transform: rotate(61.2deg);
+  transform: rotate(61.2deg);
+}
+.radial-progress.p16 .circle.animate .mask.full,
+.radial-progress.site-avg.p16 .circle.animate .mask.full,
+.radial-progress.p16 .circle.animate .fill,
+.radial-progress.site-avg.p16 .circle.animate .fill {
+  -webkit-transform: rotate(28.8deg);
+  -ms-transform: rotate(28.8deg);
+  transform: rotate(28.8deg);
+}
+.radial-progress.p16 .circle.animate .fill.fix,
+.radial-progress.site-avg.p16 .circle.animate .fill.fix {
+  -webkit-transform: rotate(57.6deg);
+  -ms-transform: rotate(57.6deg);
+  transform: rotate(57.6deg);
+}
+.radial-progress.p15 .circle.animate .mask.full,
+.radial-progress.site-avg.p15 .circle.animate .mask.full,
+.radial-progress.p15 .circle.animate .fill,
+.radial-progress.site-avg.p15 .circle.animate .fill {
+  -webkit-transform: rotate(27deg);
+  -ms-transform: rotate(27deg);
+  transform: rotate(27deg);
+}
+.radial-progress.p15 .circle.animate .fill.fix,
+.radial-progress.site-avg.p15 .circle.animate .fill.fix {
+  -webkit-transform: rotate(54deg);
+  -ms-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+.radial-progress.p14 .circle.animate .mask.full,
+.radial-progress.site-avg.p14 .circle.animate .mask.full,
+.radial-progress.p14 .circle.animate .fill,
+.radial-progress.site-avg.p14 .circle.animate .fill {
+  -webkit-transform: rotate(25.2deg);
+  -ms-transform: rotate(25.2deg);
+  transform: rotate(25.2deg);
+}
+.radial-progress.p14 .circle.animate .fill.fix,
+.radial-progress.site-avg.p14 .circle.animate .fill.fix {
+  -webkit-transform: rotate(50.4deg);
+  -ms-transform: rotate(50.4deg);
+  transform: rotate(50.4deg);
+}
+.radial-progress.p13 .circle.animate .mask.full,
+.radial-progress.site-avg.p13 .circle.animate .mask.full,
+.radial-progress.p13 .circle.animate .fill,
+.radial-progress.site-avg.p13 .circle.animate .fill {
+  -webkit-transform: rotate(23.400000000000002deg);
+  -ms-transform: rotate(23.400000000000002deg);
+  transform: rotate(23.400000000000002deg);
+}
+.radial-progress.p13 .circle.animate .fill.fix,
+.radial-progress.site-avg.p13 .circle.animate .fill.fix {
+  -webkit-transform: rotate(46.800000000000004deg);
+  -ms-transform: rotate(46.800000000000004deg);
+  transform: rotate(46.800000000000004deg);
+}
+.radial-progress.p12 .circle.animate .mask.full,
+.radial-progress.site-avg.p12 .circle.animate .mask.full,
+.radial-progress.p12 .circle.animate .fill,
+.radial-progress.site-avg.p12 .circle.animate .fill {
+  -webkit-transform: rotate(21.6deg);
+  -ms-transform: rotate(21.6deg);
+  transform: rotate(21.6deg);
+}
+.radial-progress.p12 .circle.animate .fill.fix,
+.radial-progress.site-avg.p12 .circle.animate .fill.fix {
+  -webkit-transform: rotate(43.2deg);
+  -ms-transform: rotate(43.2deg);
+  transform: rotate(43.2deg);
+}
+.radial-progress.p11 .circle.animate .mask.full,
+.radial-progress.site-avg.p11 .circle.animate .mask.full,
+.radial-progress.p11 .circle.animate .fill,
+.radial-progress.site-avg.p11 .circle.animate .fill {
+  -webkit-transform: rotate(19.8deg);
+  -ms-transform: rotate(19.8deg);
+  transform: rotate(19.8deg);
+}
+.radial-progress.p11 .circle.animate .fill.fix,
+.radial-progress.site-avg.p11 .circle.animate .fill.fix {
+  -webkit-transform: rotate(39.6deg);
+  -ms-transform: rotate(39.6deg);
+  transform: rotate(39.6deg);
+}
+.radial-progress.p10 .circle.animate .mask.full,
+.radial-progress.site-avg.p10 .circle.animate .mask.full,
+.radial-progress.p10 .circle.animate .fill,
+.radial-progress.site-avg.p10 .circle.animate .fill {
+  -webkit-transform: rotate(18deg);
+  -ms-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+.radial-progress.p10 .circle.animate .fill.fix,
+.radial-progress.site-avg.p10 .circle.animate .fill.fix {
+  -webkit-transform: rotate(36deg);
+  -ms-transform: rotate(36deg);
+  transform: rotate(36deg);
+}
+.radial-progress.p9 .circle.animate .mask.full,
+.radial-progress.site-avg.p9 .circle.animate .mask.full,
+.radial-progress.p9 .circle.animate .fill,
+.radial-progress.site-avg.p9 .circle.animate .fill {
+  -webkit-transform: rotate(16.2deg);
+  -ms-transform: rotate(16.2deg);
+  transform: rotate(16.2deg);
+}
+.radial-progress.p9 .circle.animate .fill.fix,
+.radial-progress.site-avg.p9 .circle.animate .fill.fix {
+  -webkit-transform: rotate(32.4deg);
+  -ms-transform: rotate(32.4deg);
+  transform: rotate(32.4deg);
+}
+.radial-progress.p8 .circle.animate .mask.full,
+.radial-progress.site-avg.p8 .circle.animate .mask.full,
+.radial-progress.p8 .circle.animate .fill,
+.radial-progress.site-avg.p8 .circle.animate .fill {
+  -webkit-transform: rotate(14.4deg);
+  -ms-transform: rotate(14.4deg);
+  transform: rotate(14.4deg);
+}
+.radial-progress.p8 .circle.animate .fill.fix,
+.radial-progress.site-avg.p8 .circle.animate .fill.fix {
+  -webkit-transform: rotate(28.8deg);
+  -ms-transform: rotate(28.8deg);
+  transform: rotate(28.8deg);
+}
+.radial-progress.p7 .circle.animate .mask.full,
+.radial-progress.site-avg.p7 .circle.animate .mask.full,
+.radial-progress.p7 .circle.animate .fill,
+.radial-progress.site-avg.p7 .circle.animate .fill {
+  -webkit-transform: rotate(12.6deg);
+  -ms-transform: rotate(12.6deg);
+  transform: rotate(12.6deg);
+}
+.radial-progress.p7 .circle.animate .fill.fix,
+.radial-progress.site-avg.p7 .circle.animate .fill.fix {
+  -webkit-transform: rotate(25.2deg);
+  -ms-transform: rotate(25.2deg);
+  transform: rotate(25.2deg);
+}
+.radial-progress.p6 .circle.animate .mask.full,
+.radial-progress.site-avg.p6 .circle.animate .mask.full,
+.radial-progress.p6 .circle.animate .fill,
+.radial-progress.site-avg.p6 .circle.animate .fill {
+  -webkit-transform: rotate(10.8deg);
+  -ms-transform: rotate(10.8deg);
+  transform: rotate(10.8deg);
+}
+.radial-progress.p6 .circle.animate .fill.fix,
+.radial-progress.site-avg.p6 .circle.animate .fill.fix {
+  -webkit-transform: rotate(21.6deg);
+  -ms-transform: rotate(21.6deg);
+  transform: rotate(21.6deg);
+}
+.radial-progress.p5 .circle.animate .mask.full,
+.radial-progress.site-avg.p5 .circle.animate .mask.full,
+.radial-progress.p5 .circle.animate .fill,
+.radial-progress.site-avg.p5 .circle.animate .fill {
+  -webkit-transform: rotate(9deg);
+  -ms-transform: rotate(9deg);
+  transform: rotate(9deg);
+}
+.radial-progress.p5 .circle.animate .fill.fix,
+.radial-progress.site-avg.p5 .circle.animate .fill.fix {
+  -webkit-transform: rotate(18deg);
+  -ms-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+.radial-progress.p4 .circle.animate .mask.full,
+.radial-progress.site-avg.p4 .circle.animate .mask.full,
+.radial-progress.p4 .circle.animate .fill,
+.radial-progress.site-avg.p4 .circle.animate .fill {
+  -webkit-transform: rotate(7.2deg);
+  -ms-transform: rotate(7.2deg);
+  transform: rotate(7.2deg);
+}
+.radial-progress.p4 .circle.animate .fill.fix,
+.radial-progress.site-avg.p4 .circle.animate .fill.fix {
+  -webkit-transform: rotate(14.4deg);
+  -ms-transform: rotate(14.4deg);
+  transform: rotate(14.4deg);
+}
+.radial-progress.p3 .circle.animate .mask.full,
+.radial-progress.site-avg.p3 .circle.animate .mask.full,
+.radial-progress.p3 .circle.animate .fill,
+.radial-progress.site-avg.p3 .circle.animate .fill {
+  -webkit-transform: rotate(5.4deg);
+  -ms-transform: rotate(5.4deg);
+  transform: rotate(5.4deg);
+}
+.radial-progress.p3 .circle.animate .fill.fix,
+.radial-progress.site-avg.p3 .circle.animate .fill.fix {
+  -webkit-transform: rotate(10.8deg);
+  -ms-transform: rotate(10.8deg);
+  transform: rotate(10.8deg);
+}
+.radial-progress.p2 .circle.animate .mask.full,
+.radial-progress.site-avg.p2 .circle.animate .mask.full,
+.radial-progress.p2 .circle.animate .fill,
+.radial-progress.site-avg.p2 .circle.animate .fill {
+  -webkit-transform: rotate(3.6deg);
+  -ms-transform: rotate(3.6deg);
+  transform: rotate(3.6deg);
+}
+.radial-progress.p2 .circle.animate .fill.fix,
+.radial-progress.site-avg.p2 .circle.animate .fill.fix {
+  -webkit-transform: rotate(7.2deg);
+  -ms-transform: rotate(7.2deg);
+  transform: rotate(7.2deg);
+}
+.radial-progress.p1 .circle.animate .mask.full,
+.radial-progress.site-avg.p1 .circle.animate .mask.full,
+.radial-progress.p1 .circle.animate .fill,
+.radial-progress.site-avg.p1 .circle.animate .fill {
+  -webkit-transform: rotate(1.8deg);
+  -ms-transform: rotate(1.8deg);
+  transform: rotate(1.8deg);
+}
+.radial-progress.p1 .circle.animate .fill.fix,
+.radial-progress.site-avg.p1 .circle.animate .fill.fix {
+  -webkit-transform: rotate(3.6deg);
+  -ms-transform: rotate(3.6deg);
+  transform: rotate(3.6deg);
+}
+.radial-progress.p0 .circle.animate .mask.full,
+.radial-progress.site-avg.p0 .circle.animate .mask.full,
+.radial-progress.p0 .circle.animate .fill,
+.radial-progress.site-avg.p0 .circle.animate .fill {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.radial-progress.p0 .circle.animate .fill.fix,
+.radial-progress.site-avg.p0 .circle.animate .fill.fix {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.radial-progress.seo-pass .circle .mask .fill {
+  background-color: #65b561;
+}
+.radial-progress.seo-average .circle .mask .fill {
+  background-color: #ffcc00;
+}
+.radial-progress.seo-fail .circle .mask .fill {
+  background-color: #cc0000;
+}
+.radial-progress.site-avg {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+  width: 80px;
+  height: 80px;
+  background-color: #eeeeee;
+}
+.radial-progress.site-avg .circle .mask,
+.radial-progress.site-avg .circle .fill,
+.radial-progress.site-avg .circle .shadow {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
+}
+.radial-progress.site-avg .circle .mask,
+.radial-progress.site-avg .circle .fill {
+  -webkit-backface-visibility: hidden;
+  transition: -webkit-transform 1s;
+  transition: -ms-transform 1s;
+  transition: transform 1s;
+  border-radius: 50%;
+}
+.radial-progress.site-avg .circle .mask {
+  clip: rect(0px, 80px, 80px, 40px);
+}
+.radial-progress.site-avg .circle .mask .fill {
+  clip: rect(0px, 40px, 80px, 0px);
+  background-color: #31693d;
+}
+.radial-progress.site-avg.seo-pass .circle .mask .fill {
+  background-color: #31693d;
+}
+.radial-progress.site-avg.seo-average .circle .mask .fill {
+  background-color: #e0b400;
+}
+.radial-progress.site-avg.seo-fail .circle .mask .fill {
+  background-color: #990000;
+}
+/* 
+	statistics.less
+	
+	Project: PACMS v3.0
+	
+*/
+/*------ embed api ------*/
+.full {
+  width: 100%;
+}
+.half {
+  width: 50%;
+}
+#statistics-wrapper {
+  font-size: 12px;
+  color: #333;
+  font-weight: normal;
+}
+#statistics-header {
+  width: 100%;
+}
+.gapi-analytics-auth-styles-signinbutton,
+div.gapi-analytics-auth-styles-signinbutton {
+  position: relative;
+  background: #65b561;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  height: 50px;
+  line-height: 50px;
+  outline: none;
+  padding: 0 20px 0 50px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.gapi-analytics-auth-styles-signinbutton-buttonText {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+  font-size: 16px !important;
+}
+.gapi-analytics-auth-styles-signinbutton-image,
+span.gapi-analytics-auth-styles-signinbutton-image {
+  background-color: #87c584;
+  background-position: 50% 50%;
+  border-right: none;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.gapi-analytics-auth-styles-signinbutton:hover,
+div.gapi-analytics-auth-styles-signinbutton:hover {
+  background: #31693d;
+}
+.gapi-analytics-auth-styles-signinbutton:hover .gapi-analytics-auth-styles-signinbutton-image,
+.gapi-analytics-auth-styles-signinbutton:hover span.gapi-analytics-auth-styles-signinbutton-image {
+  background-color: #418c51;
+}
+#embed-api-auth-container {
+  margin-bottom: 15px;
+  font-size: 11px;
+  color: #999;
+}
+#view-selector-container {
+  padding: 0 5px 15px 0;
+}
+#view-selector-container,
+#daterange-selector {
+  float: left;
+  padding-bottom: 15px;
+}
+#daterange-selector {
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+}
+.ViewSelector2-item,
+.DateRangeSelector-item {
+  float: left;
+  margin-right: 10px;
+}
+.input-wrapper label {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+.input-wrapper select {
+  height: 30px;
+  padding: 7px;
+  background: #fcfcfc;
+  border: 1px solid #ccc;
+}
+.input-wrapper input {
+  height: 15px;
+  padding: 7px;
+  background: #fcfcfc;
+  border: 1px solid #ccc;
+  font: inherit;
+}
+#allcharts-wrapper {
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+}
+#main-stats-holder.panel-content {
+  display: block !important;
+  padding: 0;
+  min-height: 75px !important;
+}
+#main-stats-holder.panel-content.page-stats {
+  min-height: 113px !important;
+}
+#main-stats-holder.panel-content.closed .chart-container {
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+#main-stats-holder.panel-content .chart-container {
+  width: 96%;
+  padding: 20px 3% 0 3%;
+}
+#statistics-overview td {
+  border-left: 1px solid #666;
+  background: #333;
+  color: #ccc;
+}
+#statistics-overview tr td:first-child {
+  border-left: 0;
+}
+#statistics-overview b {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+}
+.chart-container {
+  margin-bottom: 30px;
+}
+.chart-container tbody td {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+.chart-header {
+  min-height: 20px;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-bottom: 2px solid #3C6C46;
+  background: #eee;
+}
+.chart-title {
+  margin: 0;
+  color: #333;
+  font-weight: bold;
+}
+.chart-subtitle {
+  margin: 0;
+  color: #999;
+  font-weight: normal;
+}
+#chart-cities #google-visualization-geomap-0,
+#chart-cities > div {
+  height: 275px;
+}
+.legend-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.legend-container li {
+  display: inline-block;
+  padding: 10px;
+}
+.legend-container i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 7px;
+}
+.table-overview {
+  text-align: left;
+}
+.table-overview th {
+  border-bottom: 1px solid #666;
+}
+/*------ reset ------*/* {
+  margin: 0;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: #eeeeee;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+p {
+  padding: 0 0 20px 0;
+  margin: 0;
+}
+ul,
+ol {
+  padding: 0 0 20px 0;
+  margin: 0 0 0 40px;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #cccccc;
+  height: 0px;
+  background: #fff;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+/*------ clearfix ------*/
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix,
+html .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+/*------ interface ------*/
+#cms-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+}
+#cms-title {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background: #65b561;
+  padding: 20px 30px;
+  width: 240px;
+  height: 45px;
+}
+#cms-title h1 {
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+}
+#cms-title h1 small {
+  display: block;
+  font-weight: 800;
+  color: #333333;
+  font-size: 12px;
+}
+#section-title {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 30px 40px 30px 340px;
+  height: 25px;
+}
+#section-title .fa {
+  padding-right: 15px;
+}
+#cms-menu {
+  display: block;
+  position: fixed;
+  z-index: 900;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background: #333333;
+  padding-top: 85px;
+  overflow: hidden;
+}
+.resize {
+  margin-left: 300px;
+}
+/* same width as menu */
+#cms-menu nav {
+  position: absolute;
+  top: 85px;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  overflow: hidden;
+}
+#cms-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#cms-menu ul li {
+  position: relative;
+  z-index: 1;
+  display: block;
+  border-bottom: 1px solid #1a1a1a;
+  overflow: hidden;
+}
+#cms-menu ul li.accordion ul {
+  display: none;
+}
+#cms-menu ul li .ui-accordion-header {
+  -moz-box-shadow: -5px 10px 25px -5px #333333;
+  -webkit-box-shadow: -5px 10px 25px -5px #333333;
+  box-shadow: -5px 10px 25px -5px #333333;
+  z-index: 2;
+}
+#cms-menu ul li a {
+  display: block;
+  position: relative;
+  z-index: 1;
+  background: #333333;
+  padding: 20px 30px 20px 100px;
+  color: #fff;
+  font-weight: 600;
+}
+#cms-menu ul li a:hover,
+#cms-menu ul li a.active {
+  color: #65b561;
+  border-color: #65b561;
+}
+#cms-menu ul li a i {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 75px;
+  background: #4d4d4d;
+  border-left: 5px solid #4d4d4d;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#cms-menu ul li ul li {
+  border-bottom: 0;
+  border-top: 1px solid #1a1a1a;
+}
+#cms-menu ul li a:hover i,
+#cms-menu ul li a.active i {
+  border-color: #65b561 !important;
+}
+#cms-menu ul li ul li a {
+  background-color: #4d4d4d;
+}
+#cms-menu ul li ul li a i {
+  background-color: #666666;
+  border-color: #666666;
+}
+#menu-toggle {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  margin-top: -16px;
+  right: -16px;
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  background-color: #cccccc;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#menu-toggle:hover {
+  background-color: #333333;
+}
+#account-widget h4 {
+  display: block;
+  position: relative;
+  z-index: 1;
+  background: #31693d;
+  border-bottom: 1px solid #fff !important;
+  height: 58px;
+  padding: 22px 30px 0 100px;
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#account-widget h4.ui-accordion-header:after {
+  font-family: FontAwesome;
+  font-size: 12px;
+  font-weight: normal;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  height: 20px;
+  content: "\f078";
+  margin-top: -10px;
+}
+#account-widget h4.ui-accordion-header-active:after {
+  content: "\f077";
+}
+#account-widget h4 small {
+  display: block;
+  color: #65b561;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#account-widget img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#account-widget ul {
+  border-bottom: 1px solid #fff !important;
+}
+#account-widget ul li {
+  border-top: 1px solid #214629 !important;
+}
+#account-widget ul li a {
+  background-color: #31693d !important;
+}
+#account-widget ul li a i {
+  background-color: #397a47 !important;
+  border-color: #397a47 !important;
+}
+#cms-content {
+  position: relative;
+  z-index: 1;
+  padding: 125px 40px;
+}
+#cms-content.fixed {
+  position: fixed;
+}
+.cms-overview {
+  width: 400px;
+}
+.dashboard-box {
+  width: 200px;
+  height: 170px;
+  margin: 0 20px 20px 0;
+  padding: 20px 0 0 0;
+  background: #fff;
+  -moz-box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+  box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+}
+.panel {
+  display: block;
+  clear: both;
+  margin-bottom: 20px;
+  background: #fff;
+  -moz-box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+  box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+}
+.panel.f_left,
+.panel.f_right {
+  clear: none;
+}
+.panel.f_left {
+  margin-right: 20px;
+}
+.panel.f_right {
+  margin-left: 20px;
+}
+.panel-header {
+  display: block;
+  padding: 15px 20px;
+  line-height: 30px;
+  background: #ecf6ec;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.panel-header form {
+  line-height: 40px;
+}
+.panel-header form .input,
+.panel-header form .select {
+  text-transform: none;
+}
+.panel-header .panel-switch {
+  margin: 0 20px 0 0;
+  float: right;
+  line-height: 10px;
+}
+.panel-header .panel-switch label:first-child {
+  padding: 0 10px 0 0;
+  line-height: 30px;
+  height: auto;
+  float: left;
+  display: block;
+}
+.panel-content {
+  padding: 20px 20px 10px;
+  overflow: hidden;
+}
+.panel-content.collapsed {
+  display: none;
+}
+table {
+  width: 100%;
+}
+table tr th {
+  background: #cccccc;
+  padding: 20px;
+  text-align: left;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+table tr td {
+  padding: 10px 20px;
+  background: #fff;
+}
+table tr:nth-child(2n) td {
+  background: #eeeeee;
+}
+#site-pages tbody tr td {
+  padding: 15px 20px;
+}
+#site-pages tr.push td:first-child + td + td:before {
+  content: "\f148";
+  display: inline-block;
+  margin-right: 10px;
+  font-family: FontAwesome;
+  font-size: 12px;
+  color: #65b561;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+#site-pages tr.push.lvl2 td:first-child + td + td {
+  padding-left: 25px;
+}
+#site-pages tr.push.lvl3 td:first-child + td + td {
+  padding-left: 50px;
+}
+#site-pages tr.push.lvl4 td:first-child + td + td {
+  padding-left: 75px;
+}
+#site-pages tr.push.lvl5 td:first-child + td + td {
+  padding-left: 100px;
+}
+table tr.has_sub + tr td {
+  background-image: url("../images/gradient_20_down.png");
+  background-position: left top;
+  background-repeat: repeat-x;
+}
+table tr.has_sub + tr:nth-child(2n) td {
+  background-image: url("../images/gradient_10_down.png");
+}
+table tr.last_child td {
+  background-image: url("../images/gradient_20_up.png");
+  background-position: left bottom;
+  background-repeat: repeat-x;
+}
+table tr.last_child:nth-child(2n) td {
+  background-image: url("../images/gradient_10_up.png");
+}
+table tr.has_sub + tr.last_child td {
+  background-image: url("../images/gradient_20_down.png"), url("../images/gradient_20_up.png");
+  background-position: left top, left bottom;
+  background-repeat: repeat-x;
+}
+table tr.has_sub + tr.last_child:nth-child(2n) td {
+  background-image: url("../images/gradient_10_down.png"), url("../images/gradient_10_up.png");
+  background-position: left top, left bottom;
+}
+.tablesorter .tablesorter-header {
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+.tablesorter .sorter-false {
+  cursor: default;
+}
+.tablesorter .tablesorter-headerAsc,
+.tablesorter .tablesorter-headerDesc {
+  background: #bfbfbf;
+}
+.tablesorter .tablesorter-headerAsc:after,
+.tablesorter .tablesorter-headerDesc:after {
+  font-family: FontAwesome;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  height: 20px;
+}
+.tablesorter .tablesorter-headerAsc:after {
+  content: "\f0d8";
+  margin-top: -10px;
+}
+.tablesorter .tablesorter-headerDesc:after {
+  content: "\f0d7";
+  margin-top: -8px;
+}
+.tablesorter .show,
+.tablesorter .hide {
+  display: block;
+  text-indent: -9999px;
+  height: 18px;
+}
+.tablesorter .show:after,
+.tablesorter .hide:after {
+  display: block;
+  text-align: center;
+  font-family: FontAwesome;
+  font-size: 16px;
+  text-indent: 0;
+  margin-top: -16px;
+}
+.tablesorter .show:after {
+  content: "\f00c";
+  color: #65b561;
+}
+.tablesorter .hide:after {
+  content: "\f00d";
+  color: #333333;
+}
+.pager {
+  display: block;
+  position: relative !important;
+  top: auto !important;
+  padding: 10px 20px;
+  background: #fff;
+  border-top: 1px solid #eeeeee;
+  text-align: center;
+}
+.pager .button-sm {
+  float: left;
+  display: block;
+  width: 10px;
+  text-align: center;
+  margin: 0 1px;
+}
+.pager .button-sm.disabled {
+  background: #eeeeee;
+  cursor: default;
+}
+.pager .pagedisplay {
+  line-height: 40px;
+  margin-right: 10px;
+}
+.pager .pagebuttons {
+  width: 240px;
+  margin: 0 auto;
+}
+.pager .gotoPage {
+  float: left;
+  display: block;
+  width: 70px;
+  height: 40px;
+  margin: 0 1px;
+}
+.gravatar {
+  border: 1px solid #cccccc;
+  width: 40px;
+  height: 40px;
+}
+.gravatar div {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+div.ppt {
+  height: 0;
+  margin: 0;
+}
+.pp_pic_holder {
+  -moz-box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+  box-shadow: 0px 0px 4px 0px rgba(11, 11, 11, 0.35);
+}
+div.light_square a.pp_close {
+  color: #fff;
+  width: 15px;
+  background: none;
+  text-indent: 0;
+  line-height: 15px;
+}
+div.light_square a.pp_close:before {
+  position: absolute;
+  font-family: FontAwesome;
+  font-size: 16px;
+  content: "\f00d";
+  color: #65b561;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+div.light_square a.pp_close:hover:before {
+  color: #31693d;
+}
+#cms-footer {
+  position: fixed;
+  z-index: 900;
+  background: #fff;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 40px;
+  text-align: left;
+}
+#cms-footer .delete {
+  margin-right: 15px;
+}
+/*------ responsive imports ------*/
+@media all and (max-width: 1000px) {
+  /* 
+  	tablet.less
+  	
+  	Project: PACMS v3.0
+  	
+  */
+  /*------ interface ------*/
+  .resize {
+    margin-left: 0 !important;
+  }
+  #cms-title {
+    right: 0;
+    width: auto;
+    padding-left: 60px;
+  }
+  #section-title {
+    position: relative;
+    z-index: 100;
+    padding: 30px;
+    width: 100%;
+    left: -30px;
+    margin-bottom: 40px;
+  }
+  #menu-toggle {
+    right: auto;
+    left: 15px;
+  }
+  #cms-content {
+    padding: 85px 30px 110px;
+  }
+  .panel-header .panel-switch {
+    float: none;
+    clear: both;
+  }
+}
+@media all and (max-width: 480px) {
+  /* 
+  	mobile.less
+  	
+  	Project: PACMS v3.0
+  	
+  */
+  /*------ interface ------*/
+  #section-title {
+    padding: 30px 15px;
+    width: 100%;
+    left: -15px;
+    margin-bottom: 30px;
+  }
+  #cms-content {
+    padding: 85px 15px 105px;
+  }
+  .panel-content {
+    padding: 15px 15px 5px;
+  }
+}

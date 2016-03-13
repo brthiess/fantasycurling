@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* 
+	typography.less
+	
+	Project: PACMS v3.0
+	
+*/
+
+
+/*------ define vars ------*/
+@font-base: 'Open Sans', Arial, Helvetica, sans-serif;
+
+
+/*------ typography ------*/
+body, tr, td{font:400 14px/18px @font-base; color:@color-darkest; letter-spacing:0;}
+
+a{text-decoration:none; cursor:pointer; outline:none; .trans();}
+a, a:link, a:visited{color:@color-theme1;}
+a:hover, a:active{color:@color-theme2;}
+
+h1,h2,h3,h4,h5,h6{padding:0; margin:0; font-weight:normal;}
+h1{font-size:24px; line-height:24px;}
+h2{font-size:18px; margin-bottom:20px; font-weight:600;}
+h3{font-size:16px; margin-bottom:15px;}
+h4{font-size:14px; margin-bottom:10px;}
+h5{font-size:13px; margin-bottom:5px;}
+h6{font-size:12px; margin-bottom:0px;} 
+
+small{font-size:80%; color:@color-medium;}
+
+.color-theme1{color:@color-theme1;}
+.color-theme2{color:@color-theme2;}

@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* 
+	typography.css
+	
+	Project: Project Name
+	
+*/
+
+
+
+/*------ global elements------*/ 
+
+body, td{font:12px Arial, Verdana, sans-serif; color:#000; line-height:18px; letter-spacing:0px;}
+
+img{border:0; -ms-interpolation-mode:bicubic;}
+
+p{padding:0 0 15px 0; margin:0;}
+
+ul, ol{padding:0 0 15px 0; margin:0 0 0 40px;}
+
+hr{border:0; border-top:1px solid #ccc; height:0px; background:#fff; padding:0; margin:0 0 15px 0;}
+
+
+/*------ typography ------*/
+
+/* global links */
+a,
+a:link,
+a:visited{color:#ccc; text-decoration:underline; cursor:pointer;}
+a:hover,
+a:active{color:#ccc; text-decoration:none; cursor:pointer;} 
+
+/* headings reset */
+h1,h2,h3,h4,h5,h6{padding:0; font-weight:normal;}
+
+h1{font-size:30px; margin-bottom:9px;}
+h2{font-size:20px; margin-bottom:8px;}
+h3{font-size:16px; margin-bottom:7px;}
+h4{font-size:14px; margin-bottom:6px;}
+h5{font-size:12px; margin-bottom:5px;}
+h6{font-size:11px; margin-bottom:4px;}

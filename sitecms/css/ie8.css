@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* 
+	ie8.less
+	Project:PACMS v3.0
+	ლ(ಠ益ಠლ)
+*/
+input[type=file] {
+  line-height: 20px;
+}
+.select {
+  padding: 4px 0 8px 4px;
+}
+.select:focus {
+  color: #666;
+}
+.checkbox,
+.radio {
+  display: inline-block;
+}
+.checkbox + label:before,
+.radio + label:before {
+  content: none !important;
+}
+.checkbox + label,
+.radio + label {
+  padding: 1px 10px 1px 6px;
+}
+.onoffswitch {
+  width: 20px;
+}
+.onoffswitch label {
+  display: none;
+}
+.onoffswitch input {
+  display: block;
+  margin: 6px 0 0 3px;
+}
+#site-pages table {
+  border-bottom: 1px solid #cccccc;
+}

@@ -1,0 +1,60 @@
+<!-- BARE BONES EXAMPLE OF TINYMCE -->
+
+<html>
+	<head>
+		<title>BARE BONES EXAMPLE OF TINYMCE</title>
+
+		<script src="cms/js/tinymce/tinymce.js"></script>
+
+		<script type="text/javascript">
+
+			// Your base project path:
+			var basePath = "";
+
+			tinymce.init({
+				// Target only the content editors:
+			    selector: "textarea.tinymceEditor", 
+			    theme: "modern", 
+			    height: 300,
+
+			    // Typography Styles:
+			    content_css: 'css/typography.css',
+			    
+			    plugins: "image media link autolink code lists print preview anchor searchreplace wordcount visualblocks insertdatetime table spellchecker fullscreen responsivefilemanager",
+			    
+			    toolbar1: "styleselect | undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent",
+			   	toolbar2: "responsivefilemanager | image | media | youtube | link unlink anchor | print preview code",
+			    
+			    image_advtab: true,
+			    menubar: true,
+
+
+
+			    // This basic demo doesn't include the responsive file manager.
+
+
+			    /*external_filemanager_path: basePath + "/filemanager/",
+			   	filemanager_title:"Responsive Filemanager",
+			   	external_plugins: { "filemanager" : basePath + "/filemanager/plugin.min.js"}*/
+			 });
+
+		</script>
+
+
+	</head>
+
+
+	<body>
+
+
+	<textarea class="tinymceEditor">
+
+
+	</textarea>
+
+
+	</body>
+
+
+
+</html>

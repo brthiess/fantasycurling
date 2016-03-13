@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* 
+	mobile.css
+	
+	Project: Project Name
+	
+*/
+
+
+/*------ body content ------*/
+#content-tabs .ui-tabs-nav li{display:block;}
+#content-tabs .ui-tabs-nav li a{font-size:14px; padding:8px 12px; border-color:#ccc !important;}
+#content-tabs .ui-tabs-panel{padding:20px 10px 0px;}

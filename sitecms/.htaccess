@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !index.php
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ /fantasycurling/sitecms/$1/ [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/\.]+) /fantasycurling/sitecms/index.php
+
+DirectoryIndex index.html index.htm index.php index.cgi
