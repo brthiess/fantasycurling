@@ -26,6 +26,7 @@ footer, header, hgroup, menu, nav, section{display:block;}
 .nopadding{padding:0 !important;}
 .hidden{display:none !important;}
 
+
 a {color: @lightBlue; transition: color 0.3s; text-decoration: none;}
 a:hover {color: @blue;}
 
@@ -46,6 +47,10 @@ input {
 	@media @mini-tablets, @smartphones {
 		font-size: 15px;
 	}
+}
+
+.light-gray-bg {
+	background: #eee;
 }
 
 /*------- Input Styles -------------*/
@@ -294,14 +299,14 @@ nav {
 .picks-header {
 	padding: 15px 20px;
 	font-size: 30px;
-	background: #ddd; 
+	background: white; 
 }
 .picks-container {
 	display:inline-block;
-	background: #eee;
+	background: white;
 	margin:auto;
 	border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid #d5d5d5;
     width: 100%;
     max-width: 500px;
 }
@@ -310,6 +315,47 @@ nav {
     table-layout: fixed;
     width: 100%;
 }
+th {
+	font-size:25px;
+	padding: 5px;
+	background:@darkBlue;
+	color: white;
+}
+tr {
+	background: white;
+	font-size:20px;
+	height:40px;
+	&:nth-child(2n){
+		border-top: 1px solid #ccc;
+	}
+}
+td {
+	position:relative;
+}
+.vs-logo {
+	&:before {
+		content: "VS.";
+		position: absolute;
+		bottom: 79%;
+		left: 44%;
+		font-size: 12px;
+		color: @darkGold;
+	}
+}
+.radio-button {
+	display: none;
+	&:checked + .radio-label {
+		background: green;
+	}
+}
+.radio-label {
+    height: 20px;
+    width: 20px;
+    background: blue;
+    display: inline-block;
+}
+
+
 
 
 

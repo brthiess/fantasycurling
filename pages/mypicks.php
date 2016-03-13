@@ -4,12 +4,12 @@
 			   "INNER JOIN teams t2 ON t2.team_id = g.team2_id ".
 			   "INNER JOIN draws d ON d.draw_id = g.draw_id ".
 			   "ORDER BY d.ordering");
-	$draws = array();
+	$game = array();
 	if($query && !$db->error()){
-		$draws = $db->fetch_array();
+		$games = $db->fetch_array();
 	}
 	echo "<section class='picks-container-wrapper'>";
-	if (count($draws) > 0) {
+	if (count($games) > 0) {
 		echo "<section class='picks-container'>";
 			echo "<h3 class='picks-header'>My Picks</h3>";
 			echo "<table class='picks'>
@@ -19,19 +19,18 @@
 					<th>Pick</th>
 				</tr>";
 			$i = 0;
-			foreach($draws as $draw){
-				echo "<tr>";
-				echo "<td>" . $draw['number'] . "</td>";			
-				echo "<td>" . $draw['team1_name'] . "</td>";
-				echo "<td><input type='radio'/></td>";
+			foreach($games as $game){
+				echo "<tr " . ($i % 2 == 0 ? "class='light-gray-bg'" : "") . ">";
+				echo "<td rowspan='2'>" . $game['number'] . "</td>";			
+				echo "<td>" . $game['team1_name'] . "</td>";
+				echo "<td><input class='radio-button' id='g" . $game['game_id'] . "1' type='radio' name='" . $game['game_id'] . "'/><label class='radio-label' for='g" . $game['game_id'] . "1'></label></td>";
 				echo "</tr>";
 				
-				echo "<tr>";
-				echo "<td>" . $draw['number'] . "</td>";			
-				echo "<td>" . $draw['team2_name'] . "</td>";
-				echo "<td><input type='radio'/></td>";
+				echo "<tr " . ($i % 2 == 0 ? "class='light-gray-bg'" : "") . ">";							
+				echo "<td class='vs-logo'>" . $game['team2_name'] . "</td>";
+				echo "<td><input class='radio-button' id='g" . $game['game_id'] . "2' type='radio' name='" . $game['game_id'] . "'/><label class='radio-label' for='g" . $game['game_id'] . "2'></label></td>";
 				echo "</tr>";
-				
+				$i++;
 			}
 			echo "</table>";
 		echo "</section>";
