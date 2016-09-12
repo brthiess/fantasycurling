@@ -9,9 +9,6 @@
 
 <!--stylesheets-->
 <link rel="stylesheet" href="<?php echo $path; ?>css/base.css" />
-<link rel="stylesheet" href="<?php echo $path; ?>includes/plugins/prettyPhoto/css/prettyPhoto.css" />
-<link rel="stylesheet" href="<?php echo $root; ?>includes/plugins/photoswipe/photoswipe.css" />
-<link rel="stylesheet" href="<?php echo $path; ?>includes/plugins/jcrop/css/jquery.Jcrop.css" />
 <link rel="stylesheet" href="<?php echo $path; ?>includes/plugins/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
 
 <!--font-awesome-->
@@ -21,9 +18,6 @@
 <script type="text/javascript" src="<?php echo $root; ?>js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="<?php echo $root; ?>js/jquery-ui-1.10.4.min.js"></script>
 
-<!--google maps-->
-<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="<?php echo $path; ?>js/jquery-gmaps-latlon-picker.js"></script>
 
 <!--[if lte IE 8]>
 <link rel="stylesheet" href="<?php echo $path; ?>css/ie8.css" />

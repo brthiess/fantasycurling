@@ -65,6 +65,20 @@ else{
 			include("pages/mypicks.php");
 		break;
 		
+		case 4:
+			include("pages/rules.php");
+		break;
+		
+		
+		
+		case 7:
+			include("pages/account/logout.php");
+		break;
+		
+		case 8:
+			include("pages/leaderboard.php");
+		break;
+		
 		//standard
 		default:
 			echo $page['content'];

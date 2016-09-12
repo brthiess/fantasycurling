@@ -11,7 +11,7 @@ if(ACTION == ''){
 			<span class='f_right'><a class='panel-toggle fa fa-chevron-up'></a></span>
 		</div>";
 		echo "<div class='panel-content nopadding'>";
-			echo "<table cellpadding='0' cellspacing='0' border='0' class='tablesorter'>";
+			echo "<table cellpadding='0' cellspacing='0' border='0' >";
 		
 			echo "<thead>";	
 			echo "<th width='120px'>Draw</th>";
@@ -35,9 +35,6 @@ if(ACTION == ''){
 			}
 			echo "</tbody>";
 			echo "</table>";
-			
-			//Pager
-			$CMSBuilder->tablesorter_pager();
 		
 		echo "</div>";	
 	echo "</div>";
@@ -65,7 +62,7 @@ if(ACTION == ''){
 			<span class='f_right'><a class='panel-toggle fa fa-chevron-up'></a></span>
 			
 		</div>";
-		$db->query("SELECT * FROM draws");
+		$db->query("SELECT * FROM draws ORDER BY ordering");
 		$draws = $db->fetch_array();
 		echo "<div class='panel-content clearfix'>";
 			echo "<div class='form-field'>

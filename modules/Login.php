@@ -45,11 +45,11 @@ if ($page['page_id'] == 3){
 		if(isset($_POST['register'])){
 			$email = str_replace("'", "&rsquo;", stripslashes($_POST['email']));
 			$password = str_replace("'", "&rsquo;", stripslashes($_POST['password']));
-			$password2 = str_replace("'", "&rsquo;", stripslashes($_POST['password2']));
+
 			$team_name = str_replace("'", "&rsquo;", stripslashes($_POST['team_name']));
 
 			//validate
-			if($_POST['xid'] == $_COOKIE['xid'] && $password == $password2){
+			if($_POST['xid'] == $_COOKIE['xid']){
 				
 				//set parameters
 				$params[] = array('param' => 'email', 'value' => $email, 'label' => 'Email Address', 'required' => true, 'unique' => true, 'validate' => 'email', 'hash' => false);

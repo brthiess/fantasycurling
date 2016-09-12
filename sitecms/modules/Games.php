@@ -16,7 +16,7 @@ if(SECTION_ID == 16){
 	$games = array();
 	$params = array();
 	$_GET['search'] = $CMSBuilder->system_search(SECTION_ID);
-	$query = $db->query("SELECT g.*, t1.team_name AS team1_name, t2.team_name AS team2_name, t3.team_name AS winner_name, d.time AS draw_time, d.number AS draw_number FROM `games` g LEFT JOIN teams t1 ON t1.team_id = g.team1_id LEFT JOIN teams t2 ON t2.team_id = g.team2_id LEFT JOIN teams t3 ON t3.team_id = g.winner_id LEFT JOIN draws d ON d.draw_id = g.draw_id ORDER BY `game_id`", $params);
+	$query = $db->query("SELECT g.*, t1.team_name AS team1_name, t2.team_name AS team2_name, t3.team_name AS winner_name, d.time AS draw_time, d.number AS draw_number FROM `games` g LEFT JOIN teams t1 ON t1.team_id = g.team1_id LEFT JOIN teams t2 ON t2.team_id = g.team2_id LEFT JOIN teams t3 ON t3.team_id = g.winner_id LEFT JOIN draws d ON d.draw_id = g.draw_id ORDER BY d.ordering, `game_id`", $params);
 	if($query && !$db->error()){
 		$result = $db->fetch_array();
 		foreach($result as $row){

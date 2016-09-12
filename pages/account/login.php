@@ -1,59 +1,112 @@
-<div class='login-logo'>
-	<img src='<?php echo $path;?>images/logo-small.png'/>
-</div>
-<h1>Brier<span class='login-title'>King</span></h1>
-<div class='login-container'>
-	<h2>Login</h2>
-	<form name="login_form" id="login_form" class='login-form-container' action="<?php echo $path; ?>" method="post">
-		<fieldset class='login-form'>	
-			<?php if(isset($login_alert)){ echo $login_alert; } ?>
-			<input type="text" name="user_login" placeholder='email' class="input email" value="" /><br />
-			<input type="password" name="user_password" class="input password" placeholder='password' value="" /><br />
-		   
-			<label class="label_sm hidden"><input type="checkbox" name="user_reme" class="checkbox" value="1" checked /> 
-				<small>Remember Me</small>
-			</label>
-			<input type="submit" name="login" class="submit button" value="Login" />
-		</fieldset>
-	</form>
+<?php $page['no_footer'] = true;?>
+<section class='login-register-page'>
+	<div class='login-logo'>
+		<img src='<?php echo $path;?>images/logo-small.png'/>
+	</div>
+	
 
-	<p class='forgot-container'>
-		<a href="<?php echo $path; ?>pages/forgot.php?iframe=true&width=600&height=330" rel="prettyPhoto" class='forgot'>Forgot Password?</a> &nbsp; 
-	</p>
-</div>
-<?php
+	<div class='login-container hidden'>
+		<h2>Sign In</h2>
+		<form name="login_form" id="login_form" class='login-form-container' action="<?php echo $path; ?>" method="post">
+			<fieldset class='login-form'>	
+				<?php if(isset($login_alert)){ echo $login_alert; } ?>
+				<label class='login-label'><img src='<?php echo $path;?>images/email-icon.png'/></label>
+				<div class='input-container'>	
+					<input type="email" name="user_login" placeholder='Email' class="input login-input"  />	
+					<label class='input-label'>Email</label>
+				</div>
+				<label class='login-label'><img src='<?php echo $path;?>images/password-icon.png'/></label>
+				<div class='input-container'>	
+					<input type="password" name="user_password" placeholder='Password' class="input login-input"  />	
+					<label class='input-label'>Password</label>
+				</div>
+			   
+				<label class="label_sm hidden"><input type="checkbox" name="user_reme" class="checkbox" value="1" checked /> 
+					<small>Remember Me</small>
+				</label>
+				<input type="submit" name="login" class="submit button rounded no-border blue" value="Login" />
+			</fieldset>
+		</form>
 
-$displayform = true;
+		<p class='forgot-container'>
+			<a href="<?php echo $path; ?>pages/forgot.php?iframe=true&width=600&height=330" rel="prettyPhoto" class='white forgot'>Forgot Password?</a> &nbsp; 
+		</p>
+	</div>
+	<?php
+
+	$displayform = true;
 
 
-//display form
-if($displayform){
-	echo (isset($alert) ? $alert : "");
-?>
+	//display form
+	if($displayform){
+		echo (isset($alert) ? $alert : "");
+	?>
 
-<div class='register-container'>
+	<div class='register-container'>
 
-	<h2>Register</h2>
-	<form name="register_form" id="register_form" class='register-form-container' action="" method="post">
+		<h2>Sign Up</h2>
+		<form name="register_form" id="register_form" class='register-form-container' action="" method="post">
 
-		<fieldset class='register-form'>
-	  
-			<label>Email Address:</label>
-			<input type="text" name="email" class="input"  /><br />    
-		  
-			<label>Team Name:</label>
-			<input type="text" name="team_name" class="input"  /><br /> 
+			<fieldset class='register-form'>
+				
+				<label class='login-label'><img src='<?php echo $path;?>images/email-icon.png'/></label>
+				<div class='input-container'>	
+					<input type="email" name="email" placeholder='Email' class="required input login-input"  />	
+					<label class='input-label'>Email</label>
+				</div>
+				<label class='login-label'><img src='<?php echo $path;?>images/team-name-icon.png'/></label>
+				<div class='input-container'>	
+					<input type="text" name="team_name" placeholder='Team Name' class=" required input login-input"  />	
+					<label class='input-label'>Team Name</label>
+				</div>
+				<label class='login-label'><img src='<?php echo $path;?>images/password-icon.png'/></label>
+				<div class='input-container'>	
+					<input type="password" name="password" placeholder='Password' class=" required input login-input"  />	
+					<label class='input-label'>Password</label>
+				</div>
 			
-			<label>Password:</label>
-			<input type="password" name="password" class="input"  /><br />
-			
-			<label>Re-Enter Password:</label>
-			<input type="password" name="password2" class="input" /><br />   
-			
-			<input type="submit" name="register" class="submit button" value="Create Account" />
-			<input type="hidden" name="xid" value="<?php echo $_COOKIE['xid']; ?>" />
-		</fieldset>
-	</form>
-</div>
+				<input type='hidden' name='register'/>
+				<input onclick='submitAndValidateForm(event, "#register_form");' type="submit" name="register" class="submit button rounded no-border blue" value="Create Account" />
+				<input type="hidden" name="xid" value="<?php echo $_COOKIE['xid']; ?>" />
+			</fieldset>
+		</form>
+		
+	</div>
 
-<?php } ?>
+
+
+	<?php } 
+
+
+	if(isset($_POST['register'])){
+
+		//validate
+		if($_POST['xid'] == $_COOKIE['xid']){
+			
+			//set parameters
+			$params[] = array('param' => 'email', 'value' => $email, 'label' => 'Email Address', 'required' => true, 'unique' => true, 'validate' => 'email', 'hash' => false);
+			$params[] = array('param' => 'password', 'value' => $password, 'label' => 'Password', 'required' => true, 'unique' => false, 'validate' => false, 'hash' => true);		
+			$params[] =  array('param' => 'team_name', 'value' => $team_name, 'label' => 'Team Name', 'required' => true, 'unique' => false, 'validate' => false, 'hash' => false);
+			
+			//register
+			try{
+				$Account->register($params, array(), false, false, true); //<-- see class for documentation on these paramaters				
+			//register error
+			}catch(Exception $e){
+				$alert = $Account->alert($e->getMessage(), false);
+			}
+		}else{
+			$alert = $Account->alert('Unable to submit registration. Please try again.', false);	
+		}
+		
+	}
+
+
+
+	?>
+</section>
+<p class='faded toggle-container'>
+			<span class='register-footer'>Already have an account? <button class='button-link white' onclick='toggleLogin();'>Sign in</button></span>
+			<span class='login-footer hidden'>Don't have an account? <button class='button-link white' onclick='toggleLogin();'>Sign up</button></span>
+		</p>
+

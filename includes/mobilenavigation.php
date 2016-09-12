@@ -2,9 +2,9 @@
 if(count($navigation) > 0){
 	foreach($navigation as $nav){
 		if($nav['type'] == "1"){
-			echo '<li class="nav-list-desktop-item"><a href="' .$nav['url']. '" target="' .(($nav['urltarget'] == "1") ? "_blank" : ""). '">' .$nav['name']. '</a>';
+			echo '<li><a href="' .$nav['url']. '" target="' .(($nav['urltarget'] == "1") ? "_blank" : ""). '">' .$nav['name']. '</a>';
 		}else{
-			echo '<li class="nav-list-desktop-item"><a href="' .$nav['page_url']. '" class="nav-item ' .(($nav['page_id'] == $page['page_id'] || ($nav['page_id'] == $page['parent_id'])) ? "active" : ""). '">' .$nav['name']. '</a>';
+			echo '<li class="li-item" ><a href="' .$nav['page_url']. '" class="nav-item ' .(($nav['page_id'] == $page['page_id'] || ($nav['page_id'] == $page['parent_id'])) ? "active" : ""). '">' .$nav['name']. '</a>';
 		}
 		
 		if(is_array($nav['sub_pages']) && count($nav['sub_pages']) > 0){

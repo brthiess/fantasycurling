@@ -23,6 +23,7 @@ include("modules/Slideshow.php");
 include("modules/Draws.php");
 include("modules/Games.php");
 include("modules/Teams.php");
+include("modules/HotShots.php");
 
 
 //Header

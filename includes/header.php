@@ -39,18 +39,35 @@
 <div id="wrapper" >
 	<header class='header'>    
         <div id="navigation">
+			
 			<nav>
-				<a href='<?php echo $path;?>'><img id="nav-logo" src="<?php echo $path;?>images/logo-small.png" alt="<?php echo $global['company_name']; ?>"><span id='nav-title'>Brier<span class='highlighted-text'>King</span></span></a>
-				
+				<a class='nav-link' href='<?php echo $path;?>'><img id="nav-logo" src="<?php echo $path;?>images/logo-small.png" alt="<?php echo $global['company_name']; ?>"><span id='nav-title'>Brier<span class='highlighted-text'>King</span></span></a>
+				<ul id='nav-list-desktop'>
+					<?php include("includes/navigation.php");?>
+				</ul>
+				<div class='profile-container'>
+					<a class='account-link' href='<?php echo $sitemap[6]['page_url'];?>'><img class='account-logo' src='<?php echo $path . "images/" . ($Account->photo != "" ? "users/" . $Account->photo : "default.png");?>'/> <?php echo ($Account->team_name != "" ? $Account->team_name : $Account->username);?> <span class='fa fa-sort-desc'></span></a>
+					<div class='dropdown-link'>
+						<ul class='dropdown-list'>
+							<li>
+								<a class='dropdown-item' href='<?php echo $sitemap[6]['page_url'];?>'>Edit Profile</a>								
+							</li>
+							<li>
+								<a class='dropdown-item' href='<?php echo $sitemap[7]['page_url'];?>'>Logout</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 				<a id="mbl-toggle">
 					<span></span>
 					<span></span>
 					<span></span>
 				</a>
 			</nav>
+			
 		</div>  
 		<ul id='nav-list'>
-			<?php include("includes/navigation.php");?>										
+			<?php include("includes/mobilenavigation.php");?>										
 		</ul>		
 	</header>
 <?php } ?>

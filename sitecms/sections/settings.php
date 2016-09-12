@@ -18,20 +18,30 @@ if(count($cropimages) > 0){
 				echo "<div class='form-field'>
 					<label>Company Name <span class='required'>*</span></label>
 					<input type='text' name='company_name' value='" .(isset($global['company_name']) ? $global['company_name'] : ''). "' class='input" .(in_array('company_name', $required) ? ' required' : ''). "' />
-					<label>Slogan/Tagline</label>
-					<input type='text' name='slogan' value='" .(isset($global['slogan']) ? $global['slogan'] : ''). "' class='input' />
+					<label>Hotshots Deadline</label>
+					<input type='text' name='hotshots_deadline' value='" .(isset($global['hotshots_deadline']) ? $global['hotshots_deadline'] : ''). "' class='input datepicker' />
 				</div>";
+				echo "<div class='form-field'>";
+					echo "<label>Hot Shots Winner</label>";
+					echo "<select class='select'					name='hotshots_winner'>";
+				$db->query("SELECT * FROM hotshots");
+				$results = $db->fetch_array();
+				foreach($results as $player){
+					echo "<option value='" . $player['hotshot_id'] . "' " . ($player['hotshot_id'] == $global['hotshots_winner'] ? ' selected ' : '') . ">" . $player['name'] . "</option>";
+				}
+					echo "</select>";
+				echo "</div>";
 				echo "<div class='form-field'>
 					<label>Email Address <span class='required'>*</span> " .$CMSBuilder->tooltip('Email Address', 'This is the default email address that will appear on the website and where all form submissions will send to. This does NOT support multiple email addresses.'). "</label>
 					<input type='text' name='contact_email' value='" .(isset($global['contact_email']) ? $global['contact_email'] : ''). "' class='input" .(in_array('contact_email', $required) ? ' required' : ''). "' />
 					<label>Contact Form Email Address " .$CMSBuilder->tooltip('Contact Form Email', 'This is the address that all contact form submissions will send to. If left blank, submissions will send to the default email.</p><small><strong>Note:</strong> Comma separate emails if sending to more than one email. (e.g. info@pixelarmy.ca, example@pixelarmy.ca)</small>'). "</label>
 					<input type='text' name='email_contactform' value='" .(isset($global['email_contactform']) ? $global['email_contactform'] : ''). "' class='input' />	
 				</div>";
-				echo "<div class='form-field'>
+				echo "<div class='form-field hidden'>
 					<label>Disclaimer " .$CMSBuilder->tooltip('Website Disclaimer', 'This text will display in the footer of your website. This is suitable for legal disclaimers.'). "</label>
 					<textarea name='disclaimer' class='textarea'>" .(isset($global['disclaimer']) ? $global['disclaimer'] : ''). "</textarea>
 				</div>";
-				echo "<div class='form-field'>
+				echo "<div class='form-field hidden'>
 					<label>Timezone</label>
 					<select name='timezone' class='select'>
 						<option value=''>Default to Server</option>";

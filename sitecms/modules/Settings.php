@@ -57,7 +57,7 @@ if(SECTION_ID == 5){
 			//Update global settings
 			$params = array(
 				$_POST['company_name'],
-				$_POST['slogan'],
+				$_POST['hotshots_deadline'],
 				$_POST['disclaimer'],
 				$image,
 				$_POST['image_alt'],
@@ -79,9 +79,10 @@ if(SECTION_ID == 5){
 				($_POST['timezone'] != "" ? $_POST['timezone'] : NULL),
 				$_POST['show_hours'],
 				$_POST['meta_title'],
-				$_POST['meta_description']
+				$_POST['meta_description'],
+				$_POST['hotshots_winner']
 			);
-			$query = $db->query("UPDATE `global_settings` SET `company_name` = ?, `slogan` = ?, `disclaimer` = ?, `banner_image` = ?, `banner_image_alt` = ?, `contact_address` = ?, `contact_address2` = ?, `contact_city` = ?, `contact_province` = ?, `contact_postal_code` = ?, `contact_country` = ?, `contact_phone` = ?, `contact_fax` = ?, `contact_toll_free` = ?, `contact_email` = ?,`email_contactform` = ?, `google_map` = ?, `gpslat` = ?, `gpslong` = ?, `zoom` = ?, `timezone` = ?, `show_hours` = ?, `meta_title` = ?, `meta_description` = ? WHERE id = 1", $params);
+			$query = $db->query("UPDATE `global_settings` SET `company_name` = ?, `hotshots_deadline` = ?, `disclaimer` = ?, `banner_image` = ?, `banner_image_alt` = ?, `contact_address` = ?, `contact_address2` = ?, `contact_city` = ?, `contact_province` = ?, `contact_postal_code` = ?, `contact_country` = ?, `contact_phone` = ?, `contact_fax` = ?, `contact_toll_free` = ?, `contact_email` = ?,`email_contactform` = ?, `google_map` = ?, `gpslat` = ?, `gpslong` = ?, `zoom` = ?, `timezone` = ?, `show_hours` = ?, `meta_title` = ?, `meta_description` = ?, hotshots_winner = ? WHERE id = 1", $params);
 			
 			//Update phone numbers
 			if(isset($_POST['phone']) && is_array($_POST['phone'])){

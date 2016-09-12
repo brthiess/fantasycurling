@@ -6,7 +6,7 @@ if(SECTION_ID == 4){
 	$CMSBuilder->set_widget(13, 'Total teams', $total_teams);
 }
 
-if(SECTION_ID == 13){
+if(SECTION_ID == 17){
 
 	$imagedir = "../images/teams/";
 	$cropimages = array();
@@ -17,11 +17,11 @@ if(SECTION_ID == 13){
 	$teams = array();
 	$params = array();
 	$_GET['search'] = $CMSBuilder->system_search(SECTION_ID);
-	$query = $db->query("SELECT * FROM `teams`" .(isset($_GET['search']) ? "" : ""). " ORDER BY `team_id`", $params);
+	$query = $db->query("SELECT * FROM `hotshots`" .(isset($_GET['search']) ? "" : ""). " ORDER BY `hotshot_id`", $params);
 	if($query && !$db->error()){
 		$result = $db->fetch_array();
 		foreach($result as $row){
-			$teams[$row['team_id']] = $row;
+			$teams[$row['hotshot_id']] = $row;
 		}
 	}else{
 		$CMSBuilder->set_system_alert('Unable to retrieve data. '.$db->error(), false);	
@@ -89,17 +89,15 @@ if(SECTION_ID == 13){
 			//Insert to db
 			$params = array(
 				ITEM_ID, 
-				$_POST['team_name'], 
-				$_POST['skip_name'], 
-				$image,
-				$_POST['team_name'], 
-				$_POST['skip_name'], 
-				$image				
+				$_POST['name'], 
+				$_POST['province'], 
+				$_POST['name'], 
+				$_POST['province']				
 			);
-			$insert = $db->query("INSERT INTO `teams` (`team_id`, `team_name`, `skip_name`, `image`) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE `team_name` = ?, `skip_name` = ?, `image` = ?", $params);
+			$insert = $db->query("INSERT INTO `hotshots` (`hotshot_id`, `name`, `province`) VALUES (?,?,?) ON DUPLICATE KEY UPDATE `name` = ?, `province` = ?", $params);
 			if($insert && !$db->error()){
 				if(count($cropimages) == 0){
-					$CMSBuilder->set_system_alert('Team was successfully saved.', true);
+					$CMSBuilder->set_system_alert('Hotshot was successfully saved.', true);
 					header("Location: " .PAGE_URL);
 					exit();
 				}

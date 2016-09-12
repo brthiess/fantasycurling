@@ -11,6 +11,7 @@ $page = $SiteBuilder->curr_page_content();
 $global = $SiteBuilder->global_settings();
 $navigation = $SiteBuilder->get_navigation();
 $error404 = $page['error404'];
+$sitemap = $SiteBuilder->get_sitemap();
 
 //Session hijacking prevention
 if(!isset($_COOKIE['xid']) || $_COOKIE['xid'] == ""){
